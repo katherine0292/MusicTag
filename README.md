@@ -8,9 +8,9 @@ A simplified iPhone experience and a tactile MusicTag remote, designed to help l
 
 **Independent UX and interaction design commission · Katherine Lin**
 
-[**Explore the portfolio — live app, sound and hardware interaction included**](https://katherine0292.github.io/MusicTag/)
+[**Explore the portfolio — screen journeys, native MusicTag interaction and a complete phone recording**](https://katherine0292.github.io/MusicTag/)
 
-<img src="img/cover-landscape-v3.webp" alt="Three text-free music app screens and an older listener pressing MusicTag in a warm home setting." width="1100">
+<img src="img/poster.jpg" alt="The Listening Room: the retained cobalt record, iPhone and cream MusicTag cover." width="1100">
 
 </div>
 
@@ -46,7 +46,7 @@ The phone chooses content and audio output. MusicTag controls what is already pl
 
 ## Features, in operation
 
-These GIFs are excerpts of actual browser interactions. The portfolio contains the same prototypes, playable in place with synthesised sound, plus all feature videos. MP4 versions below retain sound and the complete actions; GIF previews have no audio.
+These GIFs are excerpts of actual browser interactions. The portfolio shows all 24 screens directly, a compact native MusicTag interaction study and one continuous phone-only walkthrough. The GIF previews below have no audio; the complete phone recording includes synthesised sound.
 
 ### 1. Return to familiar music
 
@@ -88,24 +88,17 @@ Discovery and connection are separate steps. A failure explains the next action.
 
 [Watch this feature with sound](assets/recordings/05-musictag-setup.mp4)
 
-### 6. Early hardware concept: phone and remote together
+### 6. Phone and remote share the same playback state
 
-<img src="assets/recordings/musictag-early-full.gif" width="640" alt="Recorded early concept: choose playlists on the phone, then press the MusicTag centre, skip and volume buttons and see the phone respond.">
+The portfolio recreates the early phone–remote concept in its own visual style. Choose a playlist on the miniature phone, then use MusicTag to play, pause, skip and adjust volume. It shares one local playback state, with synthesised sound, and stops audio when it leaves view. The older concept webpage remains in the repository as source material; it is not embedded into the portfolio.
 
-The original three-screen study makes the division of work tangible: choose a playlist on the phone, then use the remote. The portfolio embeds this working study in the design-decision chapter. Its original interaction flow is retained, with synthesised audio added so play, pause and volume can also be heard.
+## Complete phone walkthrough
 
-[Complete early MusicTag operation video](assets/recordings/musictag-early-full.mp4) · [Early concept source](early-concept/)
+[**Watch the complete phone-only recording — 1 minute 49 seconds**](assets/recordings/phone-full.mp4)
 
-This recording shows the repository’s **browser hardware simulation**, rather than footage of a physical Bluetooth device. No original device-operation video was found in the repository’s visible history.
+This is a fresh, continuous operation of the current high-fidelity prototype. Only the **402 × 812 phone display** appears in the exported video: no browser page, surrounding background, scenario panel, chapter banner or early-concept webpage. The sequence covers getting started, Library, playback, seek, save/undo, typed and simulated voice search, recovery, family invitation, output, preferences, MusicTag pairing and button practice. The video contains the synthesised sound generated during those operations.
 
-## Complete walkthroughs
-
-| Recording | Coverage |
-| --- | --- |
-| [Full app walkthrough](assets/recordings/app-full.mp4) · [English captions](assets/recordings/app-full.vtt) | Welcome, Library, listening, seek, save/undo, search, voice miss and retry, typing, offline recovery, family invitation, output, preferences, MusicTag pairing and controls. |
-| [Full early MusicTag walkthrough](assets/recordings/musictag-early-full.mp4) · [English captions](assets/recordings/musictag-early-full.vtt) | Welcome, all three playlists, centre play/pause, previous/next, volume up/down and reset, with visible phone–remote feedback. |
-
-Recordings capture real UI operations and the prototypes’ synthesised Web Audio output. They are not animations assembled from exported screens. Videos and GIFs are stored in the repository so README previews do not depend on an external video host.
+The portfolio presents this single video directly below the screen journeys, with native playback controls and no feature-selection menu or expand button. [Recording scope and reproduction](docs/recordings.md).
 
 ## From evidence to decisions
 
@@ -138,7 +131,7 @@ Eight voice states are **defined** in the specification; the browser demonstrate
 | Melody Box proposal | Dedicated player, presets, display, voice and dock. | Explored a familiar physical route into music. |
 | Early Spotify Ease + MusicTag | Three-screen phone flow and a five-control remote. | Keep music choice on an existing device; reduce what the remote asks the listener to learn. |
 | High-fidelity listening flow | 24 states, explicit output, preferences, sharing, pairing guide and failure paths. | Address button learning, playlist location and recovery questions from the early walkthrough. |
-| Integrated portfolio | Two live demos, sound, native 3:1 cover, complete archive images and function-based recordings. | Let reviewers inspect the design and operate its evidence without leaving the case study. |
+| Integrated portfolio | Direct screen journeys, compact native phone–remote controls, an adapted original cover and one phone-only walkthrough. | Keep interaction evidence within the case study’s own layout and avoid duplicated webpage shells. |
 
 [Design rationale](docs/design-rationale.md) · [Chinese portfolio review and full improvement plan](docs/portfolio-review-zh.md)
 
@@ -147,7 +140,7 @@ Eight voice states are **defined** in the specification; the browser demonstrate
 | Evidence | Status |
 | --- | --- |
 | Desk research, two interviews and early walkthrough | Completed; formative qualitative direction. |
-| Browser flows, failure recovery, narrow widths and embedded demos | Verified with the recorded operations and browser checks in [review/](review/). |
+| Browser flows, failure recovery, narrow widths and native MusicTag controls | Verified with the recorded operations and browser checks in [review/](review/). |
 | Usability sessions with listeners 65+ | Planned. Measure independent completion, wrong turns, time, recovery and help needed. |
 | Physical remote ergonomics, actual Bluetooth and audio routing | Planned; browser simulation cannot establish tactile usability or firmware reliability. |
 | Recognition and catalogue pilot across languages and accents | Planned; compare with a typed-search baseline. |
@@ -163,8 +156,8 @@ I led the research, synthesis, product interaction and prototype scope for the i
 | `index.html`, `site-src/`, `img/` | Bilingual portfolio and its editable source. |
 | `prototype/` | High-fidelity app with synthesised audio and deterministic scenarios. |
 | `early-concept/` | Early phone and MusicTag interaction study. |
-| `assets/recordings/` | Full MP4s, five app feature clips, GIF previews, VTT captions and chapter manifests. |
-| `assets/embed.js` | Embedded presentation, trusted height messages and offscreen audio pause. |
+| `assets/recordings/` | Current phone-only MP4 and capture manifest, plus earlier archived feature previews. |
+| `assets/hardware-demo.js` | Native compact phone–remote study, shared playback state and offscreen audio pause. |
 | `gallery/`, `assets/screens/`, `assets/archive/` | 24 screen exports, concept studies and design PDF. |
 | `docs/` | [Documentation index](docs/README.md), brief, research, rationale, voice specification and evaluation. |
 | `scripts/` | Recording and browser verification scripts. |
@@ -180,7 +173,7 @@ Rebuild after editing portfolio source:
 python3 site-src/build.py
 ```
 
-No build dependencies are needed to view the project. Serve it over HTTP so the two same-origin embedded demos can exchange height and pause messages. **Restart prototype** clears saved demo preferences. Re-recording uses Playwright, Chrome and ffmpeg; see [recording notes](docs/recordings.md).
+No build dependencies are needed to view the project. Serve it over HTTP for consistent local asset and video loading. **Restart prototype** clears saved demo preferences. Re-recording uses Playwright, Chrome and ffmpeg; see [recording notes](docs/recordings.md).
 
 ## Links and credits
 

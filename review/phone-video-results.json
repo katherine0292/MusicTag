@@ -1,0 +1,10 @@
+{
+  "file": "assets/recordings/phone-full.mp4",
+  "duration": "00:01:48.92",
+  "phoneOnlyResolution": true,
+  "h264": true,
+  "aac": true,
+  "meanVolumeDB": "-35.4",
+  "maxVolumeDB": "-15.8",
+  "decodedWithoutError": true
+}

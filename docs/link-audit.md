@@ -21,8 +21,8 @@ The current baseline README already uses `/MusicTag/` for its three demo links; 
 
 - One canonical portfolio link in README.
 - Repository documentation, media and source references use relative paths.
-- Live embeds use relative same-origin paths (`prototype/?embed=1`, `early-concept/?embed=1`) so GitHub Pages subdirectory hosting works.
-- Visible navigation in embedded prototypes is suppressed; full standalone demo routes remain available.
+- The portfolio recreates the hardware study as native HTML/CSS/JS; it does not embed the older webpages. All artwork and the phone-only recording use relative asset paths.
+- Full standalone prototype routes remain available separately; the portfolio has no outgoing prototype buttons.
 - Asset filename case is preserved; no reliance on case-insensitive local resolution.
 - `.nojekyll` remains present so static assets are served without Jekyll transformation.
 

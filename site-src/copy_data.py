@@ -220,3 +220,18 @@ for _key in ["cta.proto", "cta.gallery", "cta.concept", "dc.ph.t", "dc.tg.t"] + 
     C.pop(_key, None)
 
 C["ui.enlarge"] = ("放大查看", "Enlarge image")
+
+C.update({
+"hw.title": ("手机选歌，MusicTag 控制播放", "Choose on the phone. Control with MusicTag."),
+"hw.desc": ("切换手机里的歌单，再试试遥控器的播放、切歌与音量键。两边共享同一播放状态。", "Choose a playlist, then try the remote’s play, skip and volume buttons. Both devices share the same playback state."),
+"hw.note": ("早期交互概念的页内重现 · 合成声音演示", "Early interaction study, recreated in this page · Synthesised audio"),
+"hw.choose": ("选择歌单", "Choose a playlist"),
+"phonefilm.label": ("完整原型录屏", "Full prototype recording"),
+"phonefilm.title": ("一条视频，看完手机端的完整操作", "One continuous walkthrough of the phone."),
+"phonefilm.desc": ("从开始使用、选歌播放，到语音搜索、失败恢复、家人歌单、偏好设置及 MusicTag 配对与按键练习。", "From getting started and playing music to voice search, recovery, family playlists, preferences, MusicTag setup and button practice."),
+"phonefilm.note": ("实际操作高保真原型，仅录制手机屏幕，含合成声音。", "Actual high-fidelity prototype operation. Phone screen only, with synthesised audio."),
+})
+# Removed sections are no longer part of the public portfolio copy.
+for _key in list(C):
+    if _key.startswith(('live.', 'film.')) or _key in ('nav.xp', 'sc.expand'):
+        C.pop(_key)

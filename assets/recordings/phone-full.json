@@ -1,0 +1,43 @@
+{
+  "recordedOn": "2026-11-15",
+  "type": "Continuous actual high-fidelity prototype operation; phone screen only",
+  "resolution": [
+    402,
+    812
+  ],
+  "audio": "Captured synthesised Web Audio",
+  "duration": 108.923,
+  "chapters": [
+    {
+      "id": "01-listening",
+      "title": "Choose and play",
+      "start": 0.001,
+      "end": 18.06
+    },
+    {
+      "id": "02-search-recovery",
+      "title": "Search and recovery",
+      "start": 18.061,
+      "end": 43.955
+    },
+    {
+      "id": "03-family",
+      "title": "Family playlist and invitation",
+      "start": 43.955,
+      "end": 56.978
+    },
+    {
+      "id": "04-preferences",
+      "title": "Output and preferences",
+      "start": 56.979,
+      "end": 80.756
+    },
+    {
+      "id": "05-musictag-setup",
+      "title": "MusicTag setup and practice",
+      "start": 80.756,
+      "end": 107.218
+    }
+  ],
+  "errors": []
+}
