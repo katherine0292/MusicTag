@@ -1,0 +1,212 @@
+[
+  {
+    "width": 1440,
+    "errors": [],
+    "missing": [],
+    "cover": {
+      "src": "img/poster.jpg",
+      "natural": [
+        1672,
+        941
+      ],
+      "display": [
+        1156,
+        385
+      ],
+      "fit": "cover"
+    },
+    "hardwareHeight": 374.78125,
+    "comparisonHeight": 165.984375,
+    "first": "The Moon Represents My Heart",
+    "next": "Here Comes the Sun",
+    "previous": "The Moon Represents My Heart",
+    "paused": "Paused",
+    "volume": "Volume 75%",
+    "zh": "手机选歌，MusicTag 控制播放",
+    "screenCount": 24,
+    "galleryVisible": true,
+    "video": {
+      "width": 402,
+      "height": 812,
+      "duration": 108.92,
+      "src": "http://127.0.0.1:8765/assets/recordings/phone-full.mp4"
+    },
+    "structure": {
+      "iframes": 0,
+      "details": 0,
+      "liveSection": false,
+      "filmMenu": false,
+      "videos": 1,
+      "overflow": false,
+      "external": 0
+    }
+  },
+  {
+    "width": 1024,
+    "errors": [],
+    "missing": [],
+    "cover": {
+      "src": "img/poster.jpg",
+      "natural": [
+        1672,
+        941
+      ],
+      "display": [
+        956,
+        319
+      ],
+      "fit": "cover"
+    },
+    "hardwareHeight": 374.78125,
+    "comparisonHeight": 190.78125,
+    "first": "The Moon Represents My Heart",
+    "next": "Here Comes the Sun",
+    "previous": "The Moon Represents My Heart",
+    "paused": "Paused",
+    "volume": "Volume 75%",
+    "zh": "手机选歌，MusicTag 控制播放",
+    "screenCount": 24,
+    "galleryVisible": true,
+    "video": {
+      "width": 402,
+      "height": 812,
+      "duration": 108.92,
+      "src": "http://127.0.0.1:8765/assets/recordings/phone-full.mp4"
+    },
+    "structure": {
+      "iframes": 0,
+      "details": 0,
+      "liveSection": false,
+      "filmMenu": false,
+      "videos": 1,
+      "overflow": false,
+      "external": 0
+    }
+  },
+  {
+    "width": 768,
+    "errors": [],
+    "missing": [],
+    "cover": {
+      "src": "img/poster.jpg",
+      "natural": [
+        1672,
+        941
+      ],
+      "display": [
+        728,
+        243
+      ],
+      "fit": "cover"
+    },
+    "hardwareHeight": 374.78125,
+    "comparisonHeight": 190.78125,
+    "first": "The Moon Represents My Heart",
+    "next": "Here Comes the Sun",
+    "previous": "The Moon Represents My Heart",
+    "paused": "Paused",
+    "volume": "Volume 75%",
+    "zh": "手机选歌，MusicTag 控制播放",
+    "screenCount": 24,
+    "galleryVisible": true,
+    "video": {
+      "width": 402,
+      "height": 812,
+      "duration": 108.92,
+      "src": "http://127.0.0.1:8765/assets/recordings/phone-full.mp4"
+    },
+    "structure": {
+      "iframes": 0,
+      "details": 0,
+      "liveSection": false,
+      "filmMenu": false,
+      "videos": 1,
+      "overflow": false,
+      "external": 0
+    }
+  },
+  {
+    "width": 390,
+    "errors": [],
+    "missing": [],
+    "cover": {
+      "src": "img/poster.jpg",
+      "natural": [
+        1672,
+        941
+      ],
+      "display": [
+        350,
+        117
+      ],
+      "fit": "cover"
+    },
+    "hardwareHeight": 569.296875,
+    "comparisonHeight": 239.515625,
+    "first": "The Moon Represents My Heart",
+    "next": "Here Comes the Sun",
+    "previous": "The Moon Represents My Heart",
+    "paused": "Paused",
+    "volume": "Volume 75%",
+    "zh": "手机选歌，MusicTag 控制播放",
+    "screenCount": 24,
+    "galleryVisible": true,
+    "video": {
+      "width": 402,
+      "height": 812,
+      "duration": 108.92,
+      "src": "http://127.0.0.1:8765/assets/recordings/phone-full.mp4"
+    },
+    "structure": {
+      "iframes": 0,
+      "details": 0,
+      "liveSection": false,
+      "filmMenu": false,
+      "videos": 1,
+      "overflow": false,
+      "external": 0
+    }
+  },
+  {
+    "width": 320,
+    "errors": [],
+    "missing": [],
+    "cover": {
+      "src": "img/poster.jpg",
+      "natural": [
+        1672,
+        941
+      ],
+      "display": [
+        280,
+        93
+      ],
+      "fit": "cover"
+    },
+    "hardwareHeight": 602.4375,
+    "comparisonHeight": 295.484375,
+    "first": "The Moon Represents My Heart",
+    "next": "Here Comes the Sun",
+    "previous": "The Moon Represents My Heart",
+    "paused": "Paused",
+    "volume": "Volume 75%",
+    "zh": "手机选歌，MusicTag 控制播放",
+    "screenCount": 24,
+    "galleryVisible": true,
+    "video": {
+      "width": 402,
+      "height": 812,
+      "duration": 108.92,
+      "src": "http://127.0.0.1:8765/assets/recordings/phone-full.mp4"
+    },
+    "structure": {
+      "iframes": 0,
+      "details": 0,
+      "liveSection": false,
+      "filmMenu": false,
+      "videos": 1,
+      "overflow": false,
+      "external": 0
+    }
+  }
+]

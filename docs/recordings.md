@@ -1,32 +1,27 @@
-# Browser operation recordings
+# Phone-only prototype recording
 
-Recorded on 15 November 2026. These are actual Playwright-operated browser sessions, with pointer movement and chapter labels. The video recorder captures the rendered UI; a MediaRecorder captures the same Web Audio output the demo generates. ffmpeg encodes H.264/AAC MP4 and makes the feature clips. A constant gain increase makes the captured preview easier to hear in the exported videos while preserving the volume-button changes. No screen-export slideshows or prerecorded songs are substituted.
+The current portfolio shows **one directly visible continuous video**, `assets/recordings/phone-full.mp4`.
 
-## Deliverables
+## What was captured
 
-- `assets/recordings/app-full.mp4`: one continuous session covering onboarding, Library, listening, seek, undo, typed search, voice recovery, offline recovery, family invitation, output, preferences, MusicTag setup, practice and disconnect.
-- `01-listening.mp4`, `02-search-recovery.mp4`, `03-family.mp4`, `04-preferences.mp4`, `05-musictag-setup.mp4`: chapters extracted from the complete session.
-- `musictag-early-full.mp4`: independent early-concept operation; phone playlist selection, all five remote controls, three playlists and reset.
-- `.vtt`: English captions describing each task and prototype scope; the case study keeps its Chinese and English instructions.
-- `.gif`: reduced-frame-rate excerpts for inline GitHub README presentation. The MP4 versions contain audio; GIFs do not.
-- `.json`: chapter times, capture scope and browser error results.
+A fresh browser session operates the **current high-fidelity prototype** in `prototype/`, not the early-concept webpage. The recorder completes onboarding, Library, listening, seeking, save/undo, search, simulated voice miss and recovery, offline recovery, family invitation, output, preferences, MusicTag setup, pairing recovery, button practice and disconnect.
 
-The early hardware movie shows the browser simulation in `early-concept/`, not physical-device footage. No raw hardware video was found in any visible Git branch or historical object at the reviewed baseline.
+Only the phone's **402 × 812** display area is exported. The surrounding webpage, scenario panel, recording chapter labels and browser controls are excluded. The movie is a single continuous recording of actual UI interactions, not a slideshow of exports. A subtle pointer indicator makes taps visible. Captured Web Audio preserves the synthesised playback and changes to volume; a fixed gain adjustment makes the exported audio easier to hear.
+
+- Duration: approximately **1 minute 49 seconds**.
+- Video: H.264, portrait 402 × 812.
+- Audio: AAC, captured synthesised preview.
+- Poster: `assets/recordings/phone-poster.jpg`.
+- Capture manifest: `assets/recordings/phone-full.json`, with actual chapter timing and browser errors.
+
+The case study has no video-selection menu or expand control. Older recordings remain in Git history and at their original paths for earlier references; they are not the portfolio's current walkthrough.
 
 ## Reproduce
 
-Run a local HTTP server from the repository root, install Playwright, and have Chrome and ffmpeg available. Configure these environment variables for another machine:
-
-- `PLAYWRIGHT_MODULE`: absolute path to the Playwright module.
-- `PLAYWRIGHT_BROWSERS_PATH`: browser/recorder bundle directory, including Playwright's ffmpeg helper.
-- `CHROME_PATH`: Chrome executable.
-- `FFMPEG`: ffmpeg executable.
-- `DEMO_BASE_URL`: preview URL without trailing slash; defaults to `http://127.0.0.1:8765`.
+Start a local HTTP server at port 8765. Configure `PLAYWRIGHT_MODULE`, `PLAYWRIGHT_BROWSERS_PATH`, `CHROME_PATH` and `FFMPEG` for the machine, then run:
 
 ```bash
-node scripts/record-demos.cjs
-# Only regenerate the early hardware recording:
-node scripts/record-demos.cjs hardware
+node scripts/record-phone.cjs
 ```
 
-The recorder uses fresh browser storage, simulated input and a small fixed catalogue. It aborts external network resources during capture. It never records a microphone, private browser session or physical device. Clip metadata is based on actual interaction elapsed time; chapter labels and captions explain what is being exercised.
+The recorder uses an isolated browser session with fresh demo storage. It performs actual control clicks and inputs, captures browser-generated sound, and exports only the phone rectangle. It checks for page errors before completing. It does not record a microphone or the user's browser session.

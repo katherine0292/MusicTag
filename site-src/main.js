@@ -7,7 +7,7 @@ const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const NAV=$$('section.ch').map((s,i)=>({id:s.id,k:s.dataset.nav,n:String(i+1).padStart(2,'0')}));
 
 function applyText(){$$('[data-k]').forEach(el=>{el.innerHTML=t(el.dataset.k)})}
-function setLang(l){L=l;R.lang=l==='en'?'en':'zh-CN';R.classList.toggle('zh',l!=='en');$('#l-zh').setAttribute('aria-pressed',l!=='en');$('#l-en').setAttribute('aria-pressed',l==='en');ss('tlr-lang',l);applyText();renderAll()}
+function setLang(l){L=l;R.lang=l==='en'?'en':'zh-CN';R.classList.toggle('zh',l!=='en');$('#l-zh').setAttribute('aria-pressed',l!=='en');$('#l-en').setAttribute('aria-pressed',l==='en');ss('tlr-lang',l);applyText();renderAll();document.dispatchEvent(new Event('portfolio:language'))}
 $('#l-zh').onclick=()=>setLang('zh');$('#l-en').onclick=()=>setLang('en');
 
 /* rail, menu, chip */
@@ -93,14 +93,8 @@ $('#copy').onclick=async function(){try{await navigator.clipboard.writeText($('#
 
 function renderAll(){buildNav();buildStrip();prepareZoom();if(curIdx>=0){const i=curIdx;curIdx=-2;setNow(i)}}
 setLang(gs('tlr-lang')==='zh'?'zh':'en');onScroll();
-// Resize only the trusted local frames, and stop hidden demos from playing.
-const frames=$$('.live-frame');
-addEventListener('message',e=>{if(e.origin!==location.origin||e.data?.type!=='musictag:height')return;const f=frames.find(f=>f.contentWindow===e.source);if(f&&Number.isFinite(e.data.height))f.style.height=Math.min(2500,Math.max(300,e.data.height))+'px'});
-const demoObserver=new IntersectionObserver(entries=>entries.forEach(({target,isIntersecting})=>{if(!isIntersecting)target.contentWindow?.postMessage({type:'musictag:pause'},location.origin)}),{threshold:0});frames.forEach(f=>demoObserver.observe(f));
+// A single continuous phone-only recording, directly visible in the screen chapter.
 const film=$('#walkthrough');
-$$('[data-film]').forEach(b=>b.onclick=()=>{film.pause();film.src='assets/recordings/'+b.dataset.film+'.mp4';$('#film-captions').src='assets/recordings/'+b.dataset.film+'.vtt';film.poster='assets/recordings/'+(b.dataset.film==='musictag-early-full'?'hardware':'app')+'-poster.jpg';$$('[data-film]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));film.load()});
-$('#recordings').addEventListener('toggle',()=>{if(!$('#recordings').open)film.pause()});
 new IntersectionObserver(entries=>{if(!entries[0].isIntersecting)film.pause()}).observe(film);
-$('.screen-details').addEventListener('toggle',stripSync);
 window.CU={COPY,lang:()=>L,rerender:()=>setLang(L)};
 })();
