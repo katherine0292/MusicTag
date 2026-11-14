@@ -6,7 +6,10 @@ const gs=k=>{try{return localStorage.getItem(k)}catch(e){return null}},ss=(k,v)=
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const NAV=$$('section.ch').map((s,i)=>({id:s.id,k:s.dataset.nav,n:String(i+1).padStart(2,'0')}));
 
-function applyText(){$$('[data-k]').forEach(el=>{el.innerHTML=t(el.dataset.k)})}
+const phrases=['UX 与交互设计','语音交互规格','浏览器原型','数字熟练度','手部灵活度','设计委托','交互设计','评估方案','语音搜索','语音识别','音频输出','恢复路径','家人歌单','喜欢的歌','可用性测试','独立完成','高保真','资料库','麦克风','成功率','遥控器','熟悉','音乐','听众','失败','重试','恢复','字号','动效','偏好','结果','输入','评估','方案','委托','设计','规格','研究','证据','模型','原型','验证','目标','计划','样本','指标','手机','播放','暂停','切歌','音量'];
+const phrasePattern=new RegExp('('+phrases.join('|')+')','g');
+function keepPhrases(el){const walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),nodes=[];while(walk.nextNode())if(!walk.currentNode.parentElement.closest('.keep-phrase'))nodes.push(walk.currentNode);nodes.forEach(node=>{const parts=node.textContent.split(phrasePattern);if(parts.length===1)return;const frag=document.createDocumentFragment();parts.forEach((part,i)=>{if(!part)return;if(i%2){const span=document.createElement('span');span.className='keep-phrase';span.textContent=part;frag.append(span)}else frag.append(document.createTextNode(part))});node.replaceWith(frag)})}
+function applyText(){$$('[data-k]').forEach(el=>{el.innerHTML=t(el.dataset.k);if(L==='zh')keepPhrases(el)})}
 function setLang(l){L=l;R.lang=l==='en'?'en':'zh-CN';R.classList.toggle('zh',l!=='en');$('#l-zh').setAttribute('aria-pressed',l!=='en');$('#l-en').setAttribute('aria-pressed',l==='en');ss('tlr-lang',l);applyText();renderAll();document.dispatchEvent(new Event('portfolio:language'))}
 $('#l-zh').onclick=()=>setLang('zh');$('#l-en').onclick=()=>setLang('en');
 

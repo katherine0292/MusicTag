@@ -22,7 +22,7 @@ The project archive supplies additional qualitative context and an early walkthr
 | Mis-taps and changes to familiar controls create uncertainty. | Relearning controls creates friction and can discourage experimentation. | Keep tab destinations stable, label playback controls and offer undo after saving or removing. |
 | Accent sensitivity and exact-title matching make it harder to retrieve a known song. | A convenient input can become an extra barrier when the system guesses wrong. | Design cancel, retry, match review and typed fallback as first-class routes. |
 | The research pointed to familiar, stable controls with clear labels. | Daily control should be easy to recognise through touch or sight. | Give MusicTag a bounded set of transport and volume controls. Explain its role during setup. |
-| Sharing music can prompt conversation. Links can add steps to a shared listening experience. | The social value depends on the ease of getting to the music. | Keep shared playlists in the library and make recipient permissions explicit. |
+| Sharing music can encourage conversation. Links can add steps to a shared listening experience. | The social value depends on the ease of getting to the music. | Keep shared playlists in the library and make recipient permissions explicit. |
 
 ## Affinity themes
 

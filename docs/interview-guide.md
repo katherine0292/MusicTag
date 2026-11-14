@@ -6,9 +6,9 @@
 
 Thank the participant and explain that the conversation explores music in daily life. Explain how notes or recordings will be used, confirm consent before recording, and remind the participant that they can skip a question or stop. Ask about a recent experience before introducing the design idea.
 
-## Interview prompts
+## Interview questions
 
-| Topic | Main prompt | Neutral follow-up |
+| Topic | Main question | Neutral follow-up |
 |---|---|---|
 | Listening routine | Tell me about the last time you listened to music. | Where were you and what were you doing? |
 | Music and memory | Tell me about a song that brings a person or moment to mind. | What happens for you when it comes on? |
@@ -22,7 +22,7 @@ Thank the participant and explain that the conversation explores music in daily 
 
 ## Themes from the fieldwork
 
-The interview materials informed four design themes: predictable access to familiar music, visible and stable controls, speech recovery, and easier sharing. The research included different listening frequencies and comfort levels with mobile apps and physical controls. These themes shaped the interview prompts above and the fictional design personas.
+The interview materials informed four design themes: predictable access to familiar music, visible and stable controls, speech recovery, and easier sharing. The research included different listening frequencies and comfort levels with mobile apps and physical controls. These themes shaped the interview questions above and the fictional design personas.
 
 ## Synthesis procedure
 

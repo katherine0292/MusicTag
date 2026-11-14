@@ -60,7 +60,7 @@ Home keeps last played close. Library pins Liked songs. Labelled controls, a per
 
 <img src="assets/recordings/02-search-recovery.gif" width="280" alt="Recorded typed search, simulated voice miss, retry, result review, typed fallback and offline recovery.">
 
-Voice is optional. Listening is visible, results show title and artist, and no result starts playing until selected. A missed request leads to retry or typing; an offline screen keeps Library available. The demo uses fixed sample utterances, rather than microphone input or an AI model.
+Voice is optional. Listening is visible, results show title and artist, and no result starts playing until selected. A missed request leads to retry or typing; an offline screen keeps Library available. The demo uses fixed sample utterances, rather than microphone input or a recognition service.
 
 [Watch this feature with sound](assets/recordings/02-search-recovery.mp4)
 
@@ -112,7 +112,7 @@ The portfolio presents this single video directly below the screen journeys, wit
 
 Two interviews and an early walkthrough support design hypotheses; they do not establish a measured improvement in independence or wellbeing. Personas are fictional composites. See the [research synthesis](docs/research.md) and [evaluation plan](docs/evaluation.md).
 
-## AI interaction decisions
+## Voice search interaction decisions
 
 | Decision | Intended behaviour | Delivery status |
 | --- | --- | --- |
@@ -179,4 +179,4 @@ No build dependencies are needed to view the project. Serve it over HTTP for con
 
 The published project is now under `/MusicTag/`. Older `/the-listening-room/` Pages links return 404 following the repository-name change; internal documentation and media now use relative paths. See the [link audit](docs/link-audit.md).
 
-Independent concept, not affiliated with or endorsed by Spotify. Audio is synthesised, not licensed song playback. Record sleeves, device visualisations and covers use generated imagery. [Cover generation brief](docs/cover-generation.md). Icons: [Lucide licence](assets/vendor/lucide-license.txt).
+Independent concept, not affiliated with or endorsed by Spotify. Audio is synthesised, not licensed song playback. Icons: [Lucide licence](assets/vendor/lucide-license.txt).

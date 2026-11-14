@@ -53,7 +53,7 @@ C = {
 "rs.o3.b": ("取消、重试、核对匹配结果和键入，都是一等路径。", "Cancel, retry, match review and typing are first-class routes."),
 "rs.o4.a": ("日常控制需要稳定、清楚标注的按键。", "Daily control needs stable, clearly marked buttons."),
 "rs.o4.b": ("MusicTag 只保留五个独立按键。", "MusicTag keeps five distinct controls."),
-"rs.o5.a": ("分享能引发交流，但链接会增加步骤。", "Sharing prompts conversation, but links add steps."),
+"rs.o5.a": ("分享能引发交流，但链接会增加步骤。", "Sharing encourages conversation, but links add steps."),
 "rs.o5.b": ("家人歌单放在资料库，并写明对方的权限。", "Family playlists live in Library, with recipient permissions stated."),
 "rs.pers.k": ("设计用户画像（虚构的综合人物，用于检验流程）", "Design personas (fictional composites used to test flows)"),
 "rs.p1.n": ("Mary", "Mary"), "rs.p1.r": ("日常听歌的人", "Routine listener"),
@@ -113,8 +113,8 @@ C = {
 # ---- voice search
 "vo.label": ("语音搜索", "Voice search"),
 "vo.title": ("可能出错，但出错后仍好用的语音搜索", "Voice search that stays recoverable"),
-"vo.lede": ("AI 交互设计。系统提出候选项，由听众决定播放什么。原型中的识别是模拟的，生产方案另有规格说明。",
-            "AI interaction design. The system proposes candidates and the listener decides what plays. Recognition is simulated in the prototype and specified for production."),
+"vo.lede": ("系统提出候选项，由听众决定播放什么。原型中的识别是模拟的，生产方案另有规格说明。",
+            "The system proposes candidates and the listener decides what plays. Recognition is simulated in the prototype and specified for production."),
 "vo.pp.k": ("拟定流程", "Proposed flow"),
 "vo.s1.t": ("采集", "Capture"), "vo.s1.d": ("仅在点击麦克风后开始，聆听状态可见。", "Starts only on a mic tap. Listening is visible."),
 "vo.s2.t": ("识别", "Recognise"), "vo.s2.d": ("按所选语言返回文字和备选结果。", "Transcript and alternatives, by selected language."),
@@ -179,8 +179,6 @@ C = {
 "sp.r1": ("问“最近一次不顺利的听歌经历”，而不是问“功能有没有帮助”。", "Ask about the last difficult listening moment, not whether a feature would help."),
 "sp.r2": ("把每个设计决定追溯到一个具体的卡点。", "Trace every decision to a concrete breakdown."),
 "sp.r3": ("用同样的任务，把语音恢复和键入搜索做对比。", "Compare voice recovery with typed search on the same tasks."),
-"sp.note": ("独立概念项目，与 Spotify 无关联，也未获其认可。唱片封面、设备渲染图和海报使用生成图像。",
-            "Independent concept. Not affiliated with or endorsed by Spotify. Record sleeves, device renders and the poster use generated imagery."),
 "sp.big": ("Listening", "Listening"),
 
 # ---- footer / ui
@@ -235,3 +233,7 @@ C.update({
 for _key in list(C):
     if _key.startswith(('live.', 'film.')) or _key in ('nav.xp', 'sc.expand'):
         C.pop(_key)
+
+# Keep complete headline phrases together on narrow screens.
+C["hero.title"] = ("<span class='keep-phrase'>让 65 岁以上的听众</span><span class='keep-phrase'>轻松回到熟悉的音乐</span>", "<span class='keep-phrase'>Getting listeners 65+</span> <span class='keep-phrase'>back to familiar music</span>")
+C["hero.sub"] = ("<span class='keep-phrase'>一个 iPhone 应用、一个触感遥控器，</span><span class='keep-phrase'>以及识别失败后仍能恢复的语音搜索。</span>", "An iPhone app, a tactile remote, and a voice search that recovers when it misses.")
