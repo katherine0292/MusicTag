@@ -1,16 +1,16 @@
-# Voice search: AI interaction specification
+# Voice search: interaction specification
 
 **Katherine Lin · The Listening Room**
 
 ## Role and boundary
 
-This document defines the experience of an AI feature: when listening starts, how uncertainty is shown, how candidates are ranked for display and how the listener recovers. It does not specify the recognition model, its training or its infrastructure. Those need separate engineering and validation.
+This document defines the experience of a voice-search feature: when listening starts, how uncertainty is shown, how candidates are ranked for display and how the listener recovers. It does not specify the recognition model, its training or its infrastructure. Those need separate engineering and validation.
 
 ## Problem and product goal
 
 Screen search can demand precise typing. Voice can reduce that effort, but a plausible-sounding error is expensive when all the listener wants is their usual song. The goal is to find familiar music with a short, predictable recovery path when speech or catalogue matching is uncertain.
 
-The prototype demonstrates a sample spoken title, search results, a missed utterance, retry, typing and offline recovery. It uses deterministic sample inputs. The implementation below describes a proposed AI feature.
+The prototype demonstrates a sample spoken title, search results, a missed utterance, retry, typing and offline recovery. It uses deterministic sample inputs. The implementation below describes a proposed voice-search feature.
 
 ## Scope and ranking
 
@@ -45,7 +45,7 @@ Use a tap-to-start interaction with explicit stop and cancel actions and collect
 
 | Milestone | Deliverable | Exit evidence |
 |---|---|---|
-| Interaction validation | Deterministic flows in the browser prototype | Participants recognise mic state and recover from a miss with minimal prompting. |
+| Interaction validation | Deterministic flows in the browser prototype | Participants recognise mic state and recover from a miss with minimal assistance. |
 | Recognition and catalogue pilot | Limited-language catalogue matching under explicit consent | Baseline task completion, correction and recovery measures across key language conditions. |
 | Controlled release | Voice and typed pathways with observability | Reliable fallback, acceptable latency and comparable recovery across evaluated groups. |
 

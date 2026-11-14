@@ -24,4 +24,4 @@ Start a local HTTP server at port 8765. Configure `PLAYWRIGHT_MODULE`, `PLAYWRIG
 node scripts/record-phone.cjs
 ```
 
-The recorder uses an isolated browser session with fresh demo storage. It performs actual control clicks and inputs, captures browser-generated sound, and exports only the phone rectangle. It checks for page errors before completing. It does not record a microphone or the user's browser session.
+The recorder uses an isolated browser session with fresh demo storage. It performs actual control clicks and inputs, captures synthesised sound, and exports only the phone rectangle. It checks for page errors before completing. It does not record a microphone or the user's browser session.
