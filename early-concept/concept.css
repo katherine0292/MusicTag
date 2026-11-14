@@ -1,0 +1,30 @@
+.concept-stage { display: grid; grid-template-columns: minmax(0,335px) minmax(0,300px); gap: clamp(18px,5vw,70px); justify-content: center; align-items: center; padding: 28px; border-radius: 27px; background: radial-gradient(ellipse at 36% 46%,#edf0ff,transparent 57%),#e7e9f4; }
+.concept-phone { background: #111521; color: #f6f8ff; min-height: 520px; width: 100%; padding: 22px; border-radius: 32px; border: 1px solid #2f3650; box-shadow: 0 12px 20px #1a27543b; }
+.concept-brand { display: flex; align-items: center; gap: 8px; font-weight: 710; height: 36px; }
+.concept-brand-mark { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: #78e49e; color: #18221e; font-size: 21px; }
+#concept-screen h2 { font-size: 33px; line-height: 1.03; letter-spacing: -.055em; margin: 24px 0 12px; }
+#concept-screen p { color: #ccd5ed; line-height: 1.4; }
+.concept-btn, .concept-playlist, .concept-remote button, .concept-player button { cursor: pointer; min-height: 44px; }
+.concept-btn { margin-top: 16px; width: 100%; border-radius: 24px; background: #80e7a8; border: 0; color: #10271a; font-weight: 730; }
+.concept-art { border-radius: 16px; width: 78%; max-width: 230px; margin: 20px auto; }
+.concept-playlist { display: grid; grid-template-columns: 42px minmax(0,1fr) 26px; gap: 8px; align-items: center; width: 100%; padding: 9px; text-align: left; margin-bottom: 8px; background: #242b3e; border: 0; border-radius: 12px; font-weight: 680; color: #fff; }
+.concept-playlist img { border-radius: 7px; }
+.concept-player { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 15px; }
+.concept-player button, .concept-back { background: #242b3e; border: 1px solid #353f59; border-radius: 22px; padding: 8px 12px; color: #fff; min-height: 44px; }
+.concept-back { margin: 8px 0 0; }
+.concept-player button[data-action="toggle"] { background: #80e7a8; color: #10271a; border-color: #80e7a8; font-weight: 710; }
+.concept-remote { text-align: center; }
+.concept-remote h2 { font-size: 28px; letter-spacing: -.05em; }
+.concept-remote p { color: var(--muted); line-height: 1.49; }
+.disc-remote { display: grid; place-items: center; width: min(100%,225px); aspect-ratio: 1; border-radius: 50%; margin: 20px auto 15px; background: radial-gradient(circle at 33% 28%,#fff8e7,#d7cbb0 78%); box-shadow: inset 0 -8px 4px #9b8c71b0,0 13px 17px #283e5e36; border: 1px solid #ede9dc; }
+.disc-controls, .concept-volume { display: flex; justify-content: center; align-items: center; gap: 8px; }
+.disc-controls button, .concept-volume button { width: 44px; border: 1px solid #8e8a7d; border-radius: 50%; background: #f0ecd9; }
+.disc-controls #remote-toggle { background: #2c3f88; border-color: #263474; color: #fff; width: 57px; height: 57px; }
+.concept-volume output { min-width: 45px; font-variant-numeric: tabular-nums; }
+.remote-status { min-height: 45px; margin: 12px 0 2px; }
+.concept-reset { border: 0; background: transparent; color: var(--blue); text-decoration: underline; text-underline-offset: 4px; }
+.concept-archive { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; margin-top: 26px; }
+.concept-archive img { aspect-ratio: 1.38; object-fit: contain; border-radius: 12px; background: #e9eaf2; }
+.concept-archive figcaption { margin: 8px 0; color: var(--muted); font-size: 14px; }
+@media (max-width: 690px) { .concept-stage { grid-template-columns: minmax(0,335px); padding: 16px 11px 21px; } }
+@media (max-width: 380px) { .concept-archive { grid-template-columns: 1fr; } .concept-phone { padding: 16px; } }

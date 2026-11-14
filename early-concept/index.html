@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The original Spotify Ease and tactile remote concept, reconstructed as a small interactive study.">
+  <title>Early Concept | The Listening Room</title>
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="concept.css">
+  <script defer src="concept.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="../"><span class="record-mark" aria-hidden="true"></span>The Listening Room</a>
+    <nav aria-label="Portfolio"><a href="../">Case study</a><a href="../gallery/">Screen gallery</a><a href="../prototype/">Interactive prototype</a></nav>
+  </header>
+  <main class="wrap">
+    <section class="page-intro compact">
+      <p class="site-eyebrow">Early interaction study</p>
+      <h1>Spotify Ease and MusicTag</h1>
+      <p>An interactive reconstruction of the early three-screen flow. Choose a playlist on the phone, then try the remote for playback and volume.</p>
+    </section>
+    <div class="concept-stage">
+      <section class="concept-phone" aria-label="Early Spotify Ease prototype" id="concept-phone">
+        <div class="concept-brand"><span class="concept-brand-mark" aria-hidden="true">≋</span> Spotify Ease</div>
+        <div id="concept-screen"></div>
+      </section>
+      <section class="concept-remote" aria-labelledby="remote-title">
+        <h2 id="remote-title">MusicTag</h2>
+        <p>Simulated physical controls</p>
+        <div class="disc-remote">
+          <div class="disc-controls">
+            <button type="button" data-action="previous" aria-label="Previous track">◀</button>
+            <button type="button" data-action="toggle" id="remote-toggle" aria-label="Play">▶</button>
+            <button type="button" data-action="next" aria-label="Next track">▶</button>
+          </div>
+        </div>
+        <div class="concept-volume">
+          <button type="button" data-action="quieter" aria-label="Volume down">−</button>
+          <output id="concept-volume" aria-label="Volume">65%</output>
+          <button type="button" data-action="louder" aria-label="Volume up">+</button>
+        </div>
+        <p class="remote-status" id="remote-status" role="status" aria-live="polite"></p>
+        <button class="concept-reset" type="button" data-action="reset">Restart concept</button>
+      </section>
+    </div>
+    <section class="study-section">
+      <p class="site-eyebrow">Design progression</p>
+      <h2>From three screens to a complete listening flow.</h2>
+      <p>The early concept established the library-first layout and the phone–remote split. The later prototype adds explicit audio output, recovery paths, listening preferences and a practical button guide.</p>
+      <div class="links"><a class="site-btn" href="../prototype/">Try the high-fidelity prototype</a></div>
+    </section>
+    <section class="study-section">
+      <p class="site-eyebrow">Prototype archive</p>
+      <h2>Interface and hardware explorations</h2>
+      <div class="concept-archive">
+        <figure><a href="../assets/archive/original-interface.webp"><img src="../assets/archive/original-interface.webp" alt="Early mobile screens in dark mode" loading="lazy"></a><figcaption>Early mobile interface</figcaption></figure>
+        <figure><a href="../assets/archive/controller-sketch.webp"><img src="../assets/archive/controller-sketch.webp" alt="MusicTag concept sketch with its playback and volume controls" loading="lazy"></a><figcaption>MusicTag sketch</figcaption></figure>
+        <figure><a href="../assets/archive/paper-controller.webp"><img src="../assets/archive/paper-controller.webp" alt="Paper phone and tactile playback mockup" loading="lazy"></a><figcaption>Paper mockup</figcaption></figure>
+        <figure><a href="../assets/archive/physical-controller.webp"><img src="../assets/archive/physical-controller.webp" alt="Physical MusicTag mockup next to a phone" loading="lazy"></a><figcaption>Physical mockup</figcaption></figure>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>Katherine Lin · Independent portfolio case study</span><a href="https://github.com/katherine0292/the-listening-room">Project on GitHub</a></footer>
+</body>
+</html>
