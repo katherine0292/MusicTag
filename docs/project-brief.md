@@ -1,8 +1,12 @@
-# Commission Brief Summary
+# Project brief
 
 **The Listening Room · Katherine Lin**
 
-This summary records the independent design engagement as described by Katherine Lin and draws the product scope from the project’s design documentation.
+This summary records the scope of an independently commissioned design project. Katherine Lin led the UX and interaction design.
+
+## Role
+
+Research, interaction design, prototyping, the voice search interaction specification and the evaluation plan. Recognition models, production catalogue integration and Bluetooth firmware were outside this scope.
 
 ## Objective
 
@@ -10,7 +14,7 @@ Design a music listening experience that helps older adults find and play person
 
 ## Audience and design context
 
-The design targets listeners aged 65 and over, with particular attention to low digital confidence, changing vision or dexterity, and different language and voice-search needs. Spotify provides the reference interaction context. The design explores a simplified phone experience alongside a tactile playback controller.
+The design targets listeners aged 65 and over, with particular attention to low digital confidence, changing vision or dexterity, and different language and voice-search needs. Spotify is the reference interaction context. The design pairs a simplified phone experience with a tactile playback remote, MusicTag.
 
 ## Design scope
 

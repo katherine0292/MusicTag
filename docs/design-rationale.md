@@ -43,4 +43,4 @@ I originally proposed a dedicated Melody Box with presets, on-device information
 
 The commissioned project explores the product and interaction model with a deterministic browser prototype. The demo uses a small fixed catalogue, synthesised audio, local state and generated artwork. Implementation of a production catalogue, speech recognition, invitation service and Bluetooth firmware would require separate integration and validation.
 
-See [Voice product specification](voice-product-spec.md) for the AI interaction scope and [Evaluation and reflection](evaluation.md) for the planned validation.
+See the [voice interaction specification](voice-product-spec.md) for the AI feature and the [evaluation plan](evaluation.md) for planned validation.

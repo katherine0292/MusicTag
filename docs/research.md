@@ -46,4 +46,4 @@ These are fictional composites used to evaluate flows.
 
 The research supports prioritising familiar music, predictable controls and recovery. It also identifies recognition across accents, usability with vision or dexterity differences, and comprehension of the phone–remote split as risks to test. It provides qualitative direction for this brief. It does not establish the prevalence of the problems or a measurable effect on confidence or loneliness.
 
-Continue with the [interview guide](interview-guide.md), the [desk research catalogue](literature-and-product-review.md) and the [evaluation plan](evaluation.md).
+Related: [interview guide](interview-guide.md), [literature and product review](literature-and-product-review.md), [evaluation plan](evaluation.md).
