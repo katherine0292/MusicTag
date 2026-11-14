@@ -1,6 +1,10 @@
-# Voice search product specification
+# Voice search: AI interaction specification
 
 **Katherine Lin · The Listening Room**
+
+## Role and boundary
+
+This document defines the experience of an AI feature: when listening starts, how uncertainty is shown, how candidates are ranked for display and how the listener recovers. It does not specify the recognition model, its training or its infrastructure. Those need separate engineering and validation.
 
 ## Problem and product goal
 
