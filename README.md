@@ -1,52 +1,57 @@
 # The Listening Room
 
-**Independent product design case study by Katherine Lin**
+**Independently commissioned design project · Katherine Lin**
 
-AI product experience · UX design · AI application product management
+The Listening Room is an accessible music concept for adults aged 65 and over. It brings familiar songs closer through a simplified iOS interface, gives listeners a clear way forward when voice search misunderstands them, and lets them control everyday playback through a tactile remote.
 
-An accessible music experience for older listeners. Spotify Ease puts familiar songs within reach, voice search makes uncertainty visible, and MusicTag provides tactile controls for everyday playback.
+[**Open the interactive prototype**](https://katherine0292.github.io/the-listening-room/prototype/) · [Project brief summary](docs/project-brief.md) · [Browse all 24 screens](https://katherine0292.github.io/the-listening-room/gallery/)
 
-[**Try the interactive prototype**](https://katherine0292.github.io/the-listening-room/prototype/) · [View the portfolio case study](https://katherine0292.github.io/the-listening-room/) · [Browse all 24 screens](https://katherine0292.github.io/the-listening-room/gallery/)
+[![The Listening Room. An older listener presses the MusicTag play button beside a cobalt vinyl record.](assets/listening-room-poster.webp)](assets/listening-room-poster.webp)
 
-<a href="https://katherine0292.github.io/the-listening-room/"><img src="assets/portfolio-preview.webp" alt="The Listening Room portfolio preview showing Home, Voice search recovery and the MusicTag button guide"></a>
+## Commission and scope
 
-## The brief
+I accepted this commission independently. My scope covered desk research, two qualitative interviews, experience design, interaction prototyping, the voice search specification and an evaluation plan. The delivery includes a high-fidelity browser prototype, 24 iOS design states, an exploratory phone and remote prototype, and documentation linking findings to design decisions.
 
-Design a clearer path back to familiar music for listeners aged 65 and over who can lose their place when an interface changes, a control is hard to tap, or voice search misunderstands them. Help listeners recover without having to ask someone else to operate the phone.
+The brief was to help older listeners find and play personally meaningful music with less effort and greater independence. For the proof of concept, I used Spotify as the interaction context and focused on three jobs: return to something familiar, recover from a mistake and control music already playing.
 
-I contributed desk research, two qualitative interviews, design rationale, experience-centred design writing and demo editing during the earlier exploration. For this independent portfolio edition, I developed the research synthesis, 24-screen interaction prototype, voice product specification and evaluation plan. Spotify supplies the design context. The deliverable is a browser-based concept.
+## From research to design
 
-## Evidence into decisions
+I compared five music services, conducted two firsthand interviews and organised the evidence around listening routines, breakdowns and workarounds. The interviews and the early walkthrough provided qualitative direction for the following decisions.
 
-| Research signal | Product decision | Where to see it |
+| What gets in the listener’s way | What I designed | How to inspect it |
 |---|---|---|
-| Familiar music is part of daily routines and carries personal memories. | Give recent playback, liked songs and family playlists predictable placements. | Home and Library |
-| Changing layouts and small controls can interrupt listening. | Keep the navigation stable and pair primary playback icons with labels. | Library and Now Playing |
-| Accent and exact-title mismatches can make voice search costly to retry. | Show when the microphone is active. Offer a result to review, a retry and an immediate typing path. | [Voice recovery](https://katherine0292.github.io/the-listening-room/prototype/?scenario=voice) |
-| A shared song can invite conversation, but opening or forwarding links can be difficult. | Place family playlists in the library and make invitation access explicit. | [Family sharing](https://katherine0292.github.io/the-listening-room/prototype/?scenario=family) |
-| Tactile controls can make everyday playback simpler. | Put playback and volume on MusicTag. Keep playlist selection and audio output on the phone. | [Early concept](https://katherine0292.github.io/the-listening-room/early-concept/) and the MusicTag button guide |
+| A layout change or competing recommendations make it hard to recover a known song. | Home shows recent listening and Library keeps liked songs and personal playlists in predictable places. A persistent mini-player keeps playback within reach while browsing. | [Find a familiar song](https://katherine0292.github.io/the-listening-room/prototype/?scenario=find) |
+| Small controls and unfamiliar icons make playback harder to operate confidently. | The iOS design labels transport controls and offers adjustable text and motion. MusicTag puts play, pause, skip and volume on distinct physical buttons. | [Try the remote controls](https://katherine0292.github.io/the-listening-room/early-concept/) |
+| Recognition can miss an accented query or a partly remembered title. | Voice is optional. The interface shows when it is listening, allows cancellation and lets the listener review possible matches before playing one. If it misses, they can retry or type. | [Recover from a voice miss](https://katherine0292.github.io/the-listening-room/prototype/?scenario=voice) |
+| A song sent by a family member can be difficult to find again. | Family playlists have a stable place in Library. The invitation flow shows whether the recipient can listen or add songs. | [Share a family playlist](https://katherine0292.github.io/the-listening-room/prototype/?scenario=family) |
+| A failed connection can make both the device and the next action unclear. | Pairing separates discovery from connection and offers retry and a button guide. The phone handles playlist choice and speaker routing. MusicTag controls playback. | [Recover from a pairing failure](https://katherine0292.github.io/the-listening-room/prototype/?scenario=tag) |
 
-## Explore the prototypes
+I chose a phone and remote over the initial dedicated music-player concept. The phone already provides a familiar place to choose music. Moving only repeat playback actions to the remote reduces the number of controls the listener needs to learn.
 
-- [**High-fidelity interactive iOS prototype**](https://katherine0292.github.io/the-listening-room/prototype/) includes search, playback, preferences, invitations, audio output and two-step MusicTag pairing. Guided entries let reviewers start with a voice miss, offline search or pairing failure.
-- [**Early interactive concept**](https://katherine0292.github.io/the-listening-room/early-concept/) reconstructs the original welcome, library and player flow with a screen-side MusicTag simulation. The archive shows the original interface and physical explorations.
-- [**Screen gallery**](https://katherine0292.github.io/the-listening-room/gallery/) includes all 24 source screens and the [seven-page iOS design boards](assets/archive/listening-room-ios-design.pdf).
+## Voice search as a product feature
 
-The high-fidelity demo uses a fixed catalogue and synthesised audio. Voice recognition, invitations, Bluetooth pairing and speaker routing are simulated. Buttons for voice and MusicTag demonstrate product behaviour using local state.
+The proposed system has three steps: capture the request, match it to catalogue entries and let the listener choose what to play. Separating these steps keeps a plausible recognition error from starting the wrong song. Title and artist help distinguish candidates. A missed or ambiguous request can be edited or retried, and an offline state leaves Library available.
 
-## Supporting evidence
+The [voice product specification](docs/voice-product-spec.md) defines recognition and ranking behaviour, permission and failure states, language coverage, data handling and rollout gates. The prototype demonstrates those interactions using a fixed catalogue and simulated input. Its playback uses synthesised audio, and the pairing, invitations and speaker changes are local simulations.
 
-| Document | What it covers |
+## What was delivered
+
+| Deliverable | Contents |
 |---|---|
-| [Research synthesis](docs/research.md) | Two firsthand interviews, desk research, evidence strength, affinity themes and anonymised design personas |
-| [Interview guide and fieldwork summary](docs/interview-guide.md) | Research script, prompts, aggregate themes and synthesis method |
-| [Literature and product review](docs/literature-and-product-review.md) | English literature catalogue, market review and implications |
-| [Design rationale and decisions](docs/design-rationale.md) | Concept evolution, scope, trade-offs and traceability to the 24 screens |
-| [Voice product specification](docs/voice-product-spec.md) | Recognition, catalogue matching, consent, fallback, measurement and rollout |
-| [Evaluation and reflection](docs/evaluation.md) | Formative findings from the early concept, browser verification and a proposed pilot for the newer design |
+| [High-fidelity interactive prototype](https://katherine0292.github.io/the-listening-room/prototype/) | An end-to-end listening flow with onboarding, Library, search, playback, sharing, preferences, MusicTag setup and recovery. |
+| [Early interactive concept and hardware studies](https://katherine0292.github.io/the-listening-room/early-concept/) | The original three-screen flow reconstructed for the browser, a tactile control simulation, and the early sketch and mockups. |
+| [Screen gallery](https://katherine0292.github.io/the-listening-room/gallery/) and [iOS design boards](assets/archive/listening-room-ios-design.pdf) | 24 reference screens organised around six listening and setup journeys. |
+| [Research synthesis](docs/research.md), [interview guide](docs/interview-guide.md) and [literature and product review](docs/literature-and-product-review.md) | Research methods, aggregate themes, design personas and the sources behind the opportunity. |
+| [Design rationale](docs/design-rationale.md), [voice product specification](docs/voice-product-spec.md) and [evaluation plan](docs/evaluation.md) | Feature boundaries, trade-offs, AI interaction requirements and what to test next. |
+
+## Evaluation
+
+The early walkthrough pointed to two changes: make the buttons easier to learn and explain where to change playlists. The high-fidelity prototype addresses these with labelled playback controls, MusicTag button practice and explicit audio output. Browser checks verified the primary flows and recovery paths on desktop and at a 320 px mobile width.
+
+The proposed pilot would measure independent task completion, correct-song selection, retries, use of the typing fallback and understanding of the phone–remote split. It would include different levels of digital confidence, as well as voice queries across languages and accents. These are evaluation targets for the next study.
 
 ## Run locally
 
-Open `index.html` with a browser from the repository root or serve the repository with `python3 -m http.server 8000`. No build step or account is required. The prototypes use local assets and the high-fidelity prototype stores demo preferences in the browser. Select **Restart prototype** to clear that state.
+Open `index.html` or serve the repository with `python3 -m http.server 8000`. Both prototypes run in the browser with local assets. In the high-fidelity demo, **Restart prototype** clears saved demo preferences.
 
-Portfolio concept by Katherine Lin. Product names identify the design context. Illustrative record sleeves and high-fidelity device art use generated imagery. Icon attribution appears in the [Lucide licence](assets/vendor/lucide-license.txt).
+Illustrative record sleeves, device renders and the project poster use generated imagery. Icons are distributed under the [Lucide licence](assets/vendor/lucide-license.txt).

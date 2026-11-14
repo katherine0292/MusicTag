@@ -20,7 +20,7 @@ The browser prototype was checked for navigation, state changes and recovery. Th
 | Recover when offline | Keep access to Library and recover the Search tab through the retry action. |
 | Set up MusicTag | Complete discovery and connection. Exercise failure, cancel, retry, practise controls and disconnect. |
 | Adjust the experience | Text size, reduced motion and language preference update the demo. Restart restores defaults. |
-| Review on narrow screens | Production portfolio pages and phone controls remain usable at mobile widths. |
+| Review on narrow screens | The project demo pages and phone controls remain usable at mobile widths. |
 
 ## Proposed validation
 
