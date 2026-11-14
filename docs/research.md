@@ -1,6 +1,6 @@
 # Research synthesis
 
-**Katherine Lin · The Listening Room**
+**Katherine Lin · MusicTag**
 
 ## Research question
 

@@ -1,6 +1,6 @@
 # Literature and product review
 
-**Katherine Lin · The Listening Room**
+**Katherine Lin · MusicTag**
 
 ## Search catalogue
 

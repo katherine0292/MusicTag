@@ -33,7 +33,7 @@ eb = open(edit_block, encoding='utf-8').read().replace("'cu-edits-local'", "'tlr
 
 head = ('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
         '<link rel="icon" href="data:,"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>\n'
-        '<title>The Listening Room | UX &amp; Interaction Design by Katherine Lin</title>\n'
+        '<title>MusicTag | UX &amp; Interaction Design by Katherine Lin</title>\n'
         '<meta name="description" content="A music experience for listeners aged 65+: an accessible iPhone app, MusicTag tactile controls, recoverable voice search, and live interactive demonstrations.">\n'
         '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">\n'

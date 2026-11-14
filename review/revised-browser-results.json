@@ -4,18 +4,18 @@
     "errors": [],
     "missing": [],
     "cover": {
-      "src": "img/poster.jpg",
+      "src": "img/musictag-cover.webp",
       "natural": [
-        1672,
-        941
+        2172,
+        724
       ],
       "display": [
-        1156,
-        385
+        1440,
+        480
       ],
-      "fit": "cover"
+      "fit": "contain"
     },
-    "hardwareHeight": 374.78125,
+    "hardwareHeight": 362.78125,
     "comparisonHeight": 165.984375,
     "first": "The Moon Represents My Heart",
     "next": "Here Comes the Sun",
@@ -28,7 +28,7 @@
     "video": {
       "width": 402,
       "height": 812,
-      "duration": 108.92,
+      "duration": 120.76,
       "src": "http://127.0.0.1:8765/assets/recordings/phone-full.mp4"
     },
     "structure": {
@@ -46,18 +46,18 @@
     "errors": [],
     "missing": [],
     "cover": {
-      "src": "img/poster.jpg",
+      "src": "img/musictag-cover.webp",
       "natural": [
-        1672,
-        941
+        2172,
+        724
       ],
       "display": [
-        956,
-        319
+        1024,
+        341
       ],
-      "fit": "cover"
+      "fit": "contain"
     },
-    "hardwareHeight": 374.78125,
+    "hardwareHeight": 362.78125,
     "comparisonHeight": 190.78125,
     "first": "The Moon Represents My Heart",
     "next": "Here Comes the Sun",
@@ -70,7 +70,7 @@
     "video": {
       "width": 402,
       "height": 812,
-      "duration": 108.92,
+      "duration": 120.76,
       "src": "http://127.0.0.1:8765/assets/recordings/phone-full.mp4"
     },
     "structure": {
@@ -88,18 +88,18 @@
     "errors": [],
     "missing": [],
     "cover": {
-      "src": "img/poster.jpg",
+      "src": "img/musictag-cover.webp",
       "natural": [
-        1672,
-        941
+        2172,
+        724
       ],
       "display": [
-        728,
-        243
+        768,
+        256
       ],
-      "fit": "cover"
+      "fit": "contain"
     },
-    "hardwareHeight": 374.78125,
+    "hardwareHeight": 362.78125,
     "comparisonHeight": 190.78125,
     "first": "The Moon Represents My Heart",
     "next": "Here Comes the Sun",
@@ -112,7 +112,7 @@
     "video": {
       "width": 402,
       "height": 812,
-      "duration": 108.92,
+      "duration": 120.76,
       "src": "http://127.0.0.1:8765/assets/recordings/phone-full.mp4"
     },
     "structure": {
@@ -130,18 +130,18 @@
     "errors": [],
     "missing": [],
     "cover": {
-      "src": "img/poster.jpg",
+      "src": "img/musictag-cover.webp",
       "natural": [
-        1672,
-        941
+        2172,
+        724
       ],
       "display": [
-        350,
-        117
+        390,
+        130
       ],
-      "fit": "cover"
+      "fit": "contain"
     },
-    "hardwareHeight": 569.296875,
+    "hardwareHeight": 563.296875,
     "comparisonHeight": 239.515625,
     "first": "The Moon Represents My Heart",
     "next": "Here Comes the Sun",
@@ -154,7 +154,7 @@
     "video": {
       "width": 402,
       "height": 812,
-      "duration": 108.92,
+      "duration": 120.76,
       "src": "http://127.0.0.1:8765/assets/recordings/phone-full.mp4"
     },
     "structure": {
@@ -172,18 +172,18 @@
     "errors": [],
     "missing": [],
     "cover": {
-      "src": "img/poster.jpg",
+      "src": "img/musictag-cover.webp",
       "natural": [
-        1672,
-        941
+        2172,
+        724
       ],
       "display": [
-        280,
-        93
+        320,
+        107
       ],
-      "fit": "cover"
+      "fit": "contain"
     },
-    "hardwareHeight": 602.4375,
+    "hardwareHeight": 596.4375,
     "comparisonHeight": 295.484375,
     "first": "The Moon Represents My Heart",
     "next": "Here Comes the Sun",
@@ -196,7 +196,7 @@
     "video": {
       "width": 402,
       "height": 812,
-      "duration": 108.92,
+      "duration": 120.76,
       "src": "http://127.0.0.1:8765/assets/recordings/phone-full.mp4"
     },
     "structure": {

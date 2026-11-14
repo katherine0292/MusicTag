@@ -1,6 +1,6 @@
 # Design rationale and decisions
 
-**Katherine Lin · The Listening Room**
+**Katherine Lin · MusicTag**
 
 ## Product scope
 

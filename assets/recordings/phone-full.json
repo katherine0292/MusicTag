@@ -6,37 +6,37 @@
     812
   ],
   "audio": "Captured synthesised Web Audio",
-  "duration": 108.923,
+  "duration": 120.78,
   "chapters": [
     {
       "id": "01-listening",
       "title": "Choose and play",
       "start": 0.001,
-      "end": 18.06
+      "end": 19.583
     },
     {
       "id": "02-search-recovery",
       "title": "Search and recovery",
-      "start": 18.061,
-      "end": 43.955
+      "start": 19.584,
+      "end": 46.597
     },
     {
       "id": "03-family",
       "title": "Family playlist and invitation",
-      "start": 43.955,
-      "end": 56.978
+      "start": 46.598,
+      "end": 65.538
     },
     {
       "id": "04-preferences",
       "title": "Output and preferences",
-      "start": 56.979,
-      "end": 80.756
+      "start": 65.538,
+      "end": 89.763
     },
     {
       "id": "05-musictag-setup",
       "title": "MusicTag setup and practice",
-      "start": 80.756,
-      "end": 107.218
+      "start": 89.764,
+      "end": 119.077
     }
   ],
   "errors": []
