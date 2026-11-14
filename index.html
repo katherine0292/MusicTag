@@ -1,28 +1,259 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN" class="zh">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Interactive demos for The Listening Room, an independently commissioned music experience design by Katherine Lin.">
-  <title>The Listening Room | Project Demos</title>
-  <link rel="stylesheet" href="assets/site.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Listening Room：面向 65 岁以上听众的音乐体验设计，含语音搜索交互规格。Katherine Lin 作品集。">
+<meta property="og:title" content="The Listening Room · Katherine Lin">
+<meta property="og:description" content="Accessible music experience design for adults 65+, including a voice search interaction spec.">
+<meta property="og:image" content="assets/listening-room-poster.webp">
+<title>The Listening Room · Katherine Lin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="assets/portfolio.css">
+<script defer src="assets/portfolio.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <a class="wordmark" href="./" aria-current="page"><span class="record-mark" aria-hidden="true"></span>The Listening Room</a>
-    <nav aria-label="Project navigation"><a href="https://github.com/katherine0292/the-listening-room#readme">Project README</a><a href="gallery/">Screen gallery</a></nav>
-  </header>
-  <main class="wrap">
-    <section class="page-intro compact">
-      <p class="site-eyebrow">Independent design commission · Katherine Lin</p>
-      <h1>Project demos</h1>
-      <p>Explore the prototypes and design states. The GitHub README documents the commission, research and decisions.</p>
-      <div class="links"><a class="site-btn" href="prototype/">Open interactive prototype <span aria-hidden="true">↗</span></a><a class="site-btn secondary" href="https://github.com/katherine0292/the-listening-room#readme">Read the project README</a></div>
-      <div class="artifact-index">
-        <a class="artifact-link" href="early-concept/"><strong>Early concept</strong><span>Try the original listening flow and the MusicTag controls.</span><span class="arrow" aria-hidden="true">↗</span></a>
-        <a class="artifact-link" href="gallery/"><strong>24-screen design gallery</strong><span>Browse the iOS designs and the presentation boards.</span><span class="arrow" aria-hidden="true">↗</span></a>
+
+<header class="top" id="top">
+  <div class="in">
+    <a class="word" href="#hero"><span class="rec" aria-hidden="true"></span>The Listening Room</a>
+    <button class="menu-btn" id="menu-open" aria-haspopup="dialog"><i><b></b><b></b></i><span data-k="ui.menu"></span></button>
+    <span class="sp"></span>
+    <div class="langs" role="group" aria-label="Language"><button id="l-zh" aria-pressed="true">中</button><button id="l-en" aria-pressed="false">EN</button></div>
+  </div>
+  <span class="prog" id="prog"></span>
+</header>
+
+<nav class="rail" aria-label="Chapters"><ol id="rail"><span class="dot" id="rail-dot"></span></ol></nav>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Chapters"><div class="mh"><span class="word">The Listening Room</span><button id="menu-close" data-k="ui.close"></button></div><ol id="menu-list"></ol></div>
+
+<div class="sheet">
+
+<section class="banner" id="hero" aria-label="The Listening Room">
+  <img src="assets/listening-room-poster.webp" width="1672" height="941" alt="The Listening Room 海报：iPhone 播放界面与 MusicTag 遥控器置于蓝色黑胶唱片上 / Poster: iPhone Now Playing screen and the MusicTag remote on a cobalt record" fetchpriority="high">
+  <div class="chips"><span data-k="ban.1"></span><span data-k="ban.2"></span><span data-k="ban.3"></span></div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="tr" id="mq"></div></div>
+
+<!-- 01 overview -->
+<section class="ch intro" id="c-overview" data-nav="nav.overview">
+  <div class="wrap">
+    <div class="rv">
+      <p class="lbl">Katherine Lin · UX / Interaction Design</p>
+      <h1 data-k="hero.title"></h1>
+      <p class="sub" data-k="hero.sub"></p>
+      <div class="btns" style="margin-top:30px">
+        <a class="btn dk" href="prototype/" data-k="cta.proto"></a>
+        <a class="btn" href="gallery/" data-k="cta.gallery"></a>
+        <a class="btn" href="https://github.com/katherine0292/the-listening-room#readme" data-k="cta.readme"></a>
       </div>
-    </section>
-  </main>
+      <div class="meta2">
+        <div><span class="lbl" data-k="meta.role.k"></span><p data-k="meta.role.v"></p></div>
+        <div><span class="lbl" data-k="meta.aud.k"></span><p data-k="meta.aud.v"></p></div>
+        <div><span class="lbl" data-k="meta.ctx.k"></span><p data-k="meta.ctx.v"></p></div>
+        <div><span class="lbl" data-k="meta.out.k"></span><ul><li data-k="meta.out.1"></li><li data-k="meta.out.2"></li><li data-k="meta.out.3"></li></ul></div>
+      </div>
+    </div>
+    <div class="stats rv" id="stats"></div>
+    <div class="scope rv">
+      <div class="in"><h4 data-k="scope.in.h"></h4><ul id="scope-in"></ul></div>
+      <div class="out"><h4 data-k="scope.out.h"></h4><ul id="scope-out"></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 brief -->
+<section class="ch alt" id="c-brief" data-nav="nav.brief">
+  <div class="wrap">
+    <div class="head"><div class="row"><span class="no">02</span><span class="lbl" data-k="brief.label"></span></div><h2><span class="mask"><span data-k="brief.title"></span></span></h2><p class="lede rv" data-k="brief.lede"></p></div>
+    <div class="rv"><div class="loop" id="loop"></div></div>
+    <div class="jobs rv" id="jobs"></div>
+  </div>
+</section>
+
+<!-- 03 research -->
+<section class="ch" id="c-research" data-nav="nav.research">
+  <div class="wrap">
+    <div class="head"><div class="row"><span class="no">03</span><span class="lbl" data-k="rs.label"></span></div><h2><span class="mask"><span data-k="rs.title"></span></span></h2><p class="lede rv" data-k="rs.lede"></p></div>
+    <div class="funnel rv" id="funnel"></div>
+    <h3 class="h3 rv" style="margin:clamp(48px,6vw,80px) 0 26px" data-k="rs.map.title"></h3>
+    <div class="chain-r rv" id="chain-r"></div>
+    <div class="persona rv" id="persona"></div>
+    <div class="notice rv"><b data-k="rs.note.k"></b><span data-k="rs.note.v"></span></div>
+  </div>
+</section>
+
+<!-- 04 product decision -->
+<section class="ch alt" id="c-product" data-nav="nav.product">
+  <div class="wrap">
+    <div class="head"><div class="row"><span class="no">04</span><span class="lbl" data-k="pd.label"></span></div><h2><span class="mask"><span data-k="pd.title"></span></span></h2><p class="lede rv" data-k="pd.lede"></p></div>
+    <div class="g2 rv" style="align-items:start">
+      <div>
+        <div class="seg" role="group"><button id="v1" aria-pressed="false" data-k="pd.v1"></button><button id="v2" aria-pressed="true" data-k="pd.v2"></button></div>
+        <div class="ia v2" id="ia"></div>
+        <p class="verdict" id="verdict"></p>
+      </div>
+      <div class="matrix" id="matrix"></div>
+    </div>
+    <div class="arch rv" id="arch" style="margin-top:clamp(40px,5vw,64px)"></div>
+  </div>
+</section>
+
+<!-- 05 design decisions -->
+<section class="ch" id="c-design" data-nav="nav.design">
+  <div class="wrap">
+    <div class="head"><div class="row"><span class="no">05</span><span class="lbl" data-k="ds.label"></span></div><h2><span class="mask"><span data-k="ds.title"></span></span></h2></div>
+    <div class="scene rv">
+      <div><ol class="steps" id="ds-steps"></ol></div>
+      <div class="ph"><div class="phone"><div class="scr" id="ds-scr"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 prototype -->
+<section class="ch alt" id="c-proto" data-nav="nav.proto">
+  <div class="wrap">
+    <div class="head"><div class="row"><span class="no">06</span><span class="lbl" data-k="pr.label"></span></div><h2><span class="mask"><span data-k="pr.title"></span></span></h2><p class="lede rv" data-k="pr.lede"></p></div>
+    <div class="rv">
+      <div class="tabs" id="j-tabs" role="group"></div>
+      <div class="jshots" id="j-shots"></div>
+      <div class="jmeta"><p id="j-desc"></p><div class="btns" id="j-btns"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 voice (AI) -->
+<section class="ch dark" id="c-voice" data-nav="nav.voice" data-tone="dark">
+  <div class="wrap">
+    <div class="head"><div class="row"><span class="no">07</span><span class="lbl" data-k="vo.label"></span><span class="tg" data-k="tag.ai"></span></div><h2><span class="mask"><span data-k="vo.title"></span></span></h2><p class="lede rv" data-k="vo.lede"></p></div>
+
+    <div class="g2 rv" style="align-items:start">
+      <div>
+        <h3 class="h3" style="margin-bottom:22px" data-k="vo.pipe.title"></h3>
+        <div class="chain" id="chain"></div>
+        <div class="legend"><span data-k="vo.legend.ai"></span><span data-k="vo.legend.ux"></span></div>
+      </div>
+      <div>
+        <h3 class="h3" style="margin-bottom:22px" data-k="vo.rank.title"></h3>
+        <ol class="rank" id="rank"></ol>
+        <p class="muted" style="font-size:14px;margin-top:16px" data-k="vo.rank.note"></p>
+      </div>
+    </div>
+
+    <h3 class="h3 rv" style="margin:clamp(56px,7vw,96px) 0 12px" data-k="vo.sim.title"></h3>
+    <p class="muted rv" style="margin-bottom:26px;max-width:60ch" data-k="vo.sim.sub"></p>
+    <div class="sim rv">
+      <div>
+        <div class="opts" id="sim-opts" role="group"></div>
+        <div class="stt" id="sim-out" aria-live="polite"></div>
+      </div>
+      <div class="ph"><div class="phone"><div class="scr" id="sim-scr"></div></div></div>
+    </div>
+
+    <div class="prin rv" id="prin" style="margin-top:clamp(56px,7vw,96px)"></div>
+
+    <div class="g2 rv" style="margin-top:clamp(56px,7vw,96px);align-items:start">
+      <div>
+        <h3 class="h3" style="margin-bottom:20px" data-k="vo.lang.title"></h3>
+        <p class="kpi-h" data-k="vo.lang.l1"></p><div class="chips" id="langs-c" style="margin-bottom:22px"></div>
+        <p class="kpi-h" data-k="vo.lang.l2"></p><div class="chips" id="matrix-c" style="margin-bottom:22px"></div>
+        <p class="kpi-h" data-k="vo.lang.l3"></p><p class="muted" style="font-size:14.5px" data-k="vo.lang.p3"></p>
+      </div>
+      <div>
+        <h3 class="h3" style="margin-bottom:20px" data-k="vo.kpi.title"></h3>
+        <p class="kpi-h" data-k="vo.kpi.l1"></p><p style="font-size:15.5px;margin-bottom:22px" data-k="vo.kpi.p1"></p>
+        <p class="kpi-h" data-k="vo.kpi.l2"></p><div class="chips" id="kpi-c"></div>
+      </div>
+    </div>
+
+    <h3 class="h3 rv" style="margin:clamp(56px,7vw,96px) 0 28px" data-k="vo.roll.title"></h3>
+    <div class="tl rv" id="roll"></div>
+    <div class="notice rv"><b data-k="vo.note.k"></b><span data-k="vo.note.v"></span></div>
+  </div>
+</section>
+
+<!-- 08 ease -->
+<section class="ch" id="c-ease" data-nav="nav.ease">
+  <div class="wrap">
+    <div class="head"><div class="row"><span class="no">08</span><span class="lbl" data-k="ea.label"></span></div><h2><span class="mask"><span data-k="ea.title"></span></span></h2><p class="lede rv" data-k="ea.lede"></p></div>
+    <div class="demo rv">
+      <div class="mini" id="mini">
+        <h4 data-k="ea.m.h"></h4><p class="sb" data-k="ea.m.sb"></p>
+        <div class="rw"><i></i><div><b>Family playlist</b><small data-k="ea.m.r1"></small></div><span class="go">▶</span></div>
+        <div class="rw"><i></i><div><b>Cantopop favourites</b><small data-k="ea.m.r2"></small></div><span class="go">▶</span></div>
+        <div class="rw"><i></i><div><b>Morning Walk</b><small data-k="ea.m.r3"></small></div><span class="go">▶</span></div>
+        <div class="disc" aria-hidden="true"></div>
+      </div>
+      <div>
+        <div class="tgl"><span class="lbl" data-k="ea.t1"></span><div class="seg" style="margin:0" role="group"><button id="ts-1" aria-pressed="true" data-k="ea.t1a"></button><button id="ts-2" aria-pressed="false" data-k="ea.t1b"></button></div></div>
+        <div class="tgl"><span class="lbl" data-k="ea.t2"></span><button class="sw" id="mo" aria-pressed="false" aria-label="Reduce motion"></button></div>
+        <ul class="lst" id="ea-list"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 MusicTag -->
+<section class="ch alt" id="c-tag" data-nav="nav.tag">
+  <div class="wrap">
+    <div class="head"><div class="row"><span class="no">09</span><span class="lbl" data-k="tg.label"></span></div><h2><span class="mask"><span data-k="tg.title"></span></span></h2><p class="lede rv" data-k="tg.lede"></p></div>
+    <div class="tagwrap rv">
+      <div>
+        <div class="seg" role="group"><button id="p-ok" aria-pressed="true" data-k="tg.ok"></button><button id="p-fail" aria-pressed="false" data-k="tg.fail"></button></div>
+        <div class="flow" id="flow"></div>
+        <p class="flow-note" id="flow-note" aria-live="polite"></p>
+        <div class="ctlrow"><button class="btn" id="f-prev" data-k="ui.prev"></button><button class="btn dk" id="f-next" data-k="ui.next"></button><span class="muted num" id="f-cnt" style="font-size:13px"></span></div>
+      </div>
+      <div class="ph"><div class="phone"><div class="scr" id="tg-scr"></div></div></div>
+    </div>
+    <div class="remote-box rv">
+      <div class="remote" id="remote">
+        <span class="led"></span>
+        <button class="pv" data-a="prev" aria-label="Previous">⏮</button>
+        <button class="pp" data-a="toggle" aria-label="Play / pause">⏯</button>
+        <button class="nx" data-a="next" aria-label="Next">⏭</button>
+        <button class="vu" data-a="up" aria-label="Volume up">+</button>
+        <button class="vd" data-a="down" aria-label="Volume down">−</button>
+      </div>
+      <div>
+        <p class="lbl" style="margin-bottom:10px" data-k="tg.rem.k"></p>
+        <p style="font-size:15px;color:var(--ink-2);max-width:50ch;margin-bottom:18px" data-k="tg.rem.v"></p>
+        <div class="rd" id="rd"><div class="tt" id="rd-t"></div><div class="ar2" id="rd-a"></div><div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="vol"><i id="rd-v"></i></div><div class="vl"><span data-k="tg.vol"></span><span id="rd-vp"></span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 evaluation -->
+<section class="ch" id="c-eval" data-nav="nav.eval">
+  <div class="wrap">
+    <div class="head"><div class="row"><span class="no">10</span><span class="lbl" data-k="ev.label"></span></div><h2><span class="mask"><span data-k="ev.title"></span></span></h2><p class="lede rv" data-k="ev.lede"></p></div>
+    <div class="g2 rv" style="align-items:start">
+      <div class="ladder" id="ladder"></div>
+      <div>
+        <p class="lbl" style="margin-bottom:12px" data-k="ev.pilot.k"></p>
+        <div class="chips" id="pilot" style="margin-bottom:22px"></div>
+        <ul class="lst" id="ev-list" style="margin-top:0"></ul>
+      </div>
+    </div>
+    <h3 class="h3 rv" style="margin:clamp(48px,6vw,80px) 0 22px" data-k="ev.tasks.title"></h3>
+    <div class="tw rv"><table><thead><tr id="ev-th"></tr></thead><tbody id="ev-tb"></tbody></table></div>
+  </div>
+</section>
+
+<!-- 11 end -->
+<section class="ch alt" id="c-end" data-nav="nav.end">
+  <div class="wrap">
+    <div class="head"><div class="row"><span class="no">11</span><span class="lbl" data-k="en.label"></span></div><h2><span class="mask"><span data-k="en.title"></span></span></h2></div>
+    <div class="refl rv" id="refl"></div>
+    <div class="links rv" id="links"></div>
+    <div class="foot"><span>© 2026 Katherine Lin</span><span data-k="en.foot"></span></div>
+  </div>
+</section>
+
+</div>
 </body>
 </html>
