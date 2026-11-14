@@ -36,8 +36,8 @@ Recruit an initial usability round with adults aged 65 and over who vary in digi
 
 Before and after each task, ask how confident the listener feels doing this independently. Note differences between what a participant says and what they do. Treat small-sample results as formative and report the number of sessions and conditions.
 
-## Reflection
+## What I would carry forward
 
-My original research began with features and moved toward the moments they interrupt. A question such as “would bigger buttons help?” can invite agreement. Asking for the last frustrating listening experience brings out the obstacle, the workaround and how much that moment mattered.
-
-Writing the rationale taught me to trace design decisions back to concrete breakdowns. Editing the early narrative made me attend to the timing of an interaction and the emotional consequences of a delay. I would carry those lessons into the next round by using neutral prompts, checking reading and touch conditions early, and comparing voice recovery with typed search on the same tasks.
+- **Ask about the last difficult moment.** “Would bigger buttons help?” invites agreement. “Tell me about the last time listening did not work” surfaces the obstacle, the workaround and what was at stake.
+- **Trace each decision to a breakdown.** Writing the rationale taught me to tie every design decision to a concrete breakdown.
+- **Compare voice with typing.** Run voice recovery and typed search on the same tasks, and check reading and touch conditions early.
