@@ -18,19 +18,23 @@ js = open(os.path.join(here, 'main.js'), encoding='utf-8').read()
 used = set(re.findall(r'data-k="([^"$]+)"', tpl))
 missing = sorted(k for k in used if k not in C)
 dyn = re.compile(r'^sc\d\.')
-unused = sorted(k for k in C if k not in used and not re.match(r'^(j\d|s\d\d)$', k) and not k.startswith('nav.') and k not in ('ui.close', 'ft.copied'))
+unused = sorted(k for k in C if k not in used and not re.match(r'^(j\d|s\d\d)$', k) and not k.startswith('nav.') and k not in ('ui.close', 'ui.enlarge', 'ft.copied'))
 if missing: print('MISSING', missing); sys.exit(1)
 if unused: print('UNUSED', unused)
 # keys built in JS: journeys j1-j6 and screen names s01-s24
 for k in [f'j{i}' for i in range(1, 7)] + [f's{i:02d}' for i in range(1, 25)]:
     if k not in C: print('MISSING', k); sys.exit(1)
 
+# Keep the initial document readable before JavaScript applies a saved language.
+tpl = re.sub(r'(<[^>]+data-k="([^"$]+)"[^>]*>)(</[^>]+>)',
+             lambda m: m.group(1) + C[m.group(2)][1] + m.group(3), tpl)
 copy_js = 'const COPY=' + json.dumps({k: list(v) for k, v in C.items()}, ensure_ascii=False) + ';\n'
 eb = open(edit_block, encoding='utf-8').read().replace("'cu-edits-local'", "'tlr-edits-local'")
 
 head = ('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
         '<link rel="icon" href="data:,"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>\n'
-        '<title>The Listening Room</title>\n'
+        '<title>The Listening Room | UX &amp; Interaction Design by Katherine Lin</title>\n'
+        '<meta name="description" content="A music experience for listeners aged 65+: an accessible iPhone app, MusicTag tactile controls, recoverable voice search, and live interactive demonstrations.">\n'
         '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">\n'
         '<style>' + css + '</style>\n</head><body>\n')

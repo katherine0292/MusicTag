@@ -1,0 +1,65 @@
+[
+  {
+    "file": "01-listening.mp4",
+    "duration": "00:00:18.08",
+    "h264": true,
+    "aac": true,
+    "meanVolumeDB": "-35.3",
+    "maxVolumeDB": "-17.4",
+    "decodedWithoutError": true
+  },
+  {
+    "file": "02-search-recovery.mp4",
+    "duration": "00:00:25.96",
+    "h264": true,
+    "aac": true,
+    "meanVolumeDB": "-35.5",
+    "maxVolumeDB": "-17.5",
+    "decodedWithoutError": true
+  },
+  {
+    "file": "03-family.mp4",
+    "duration": "00:00:13.04",
+    "h264": true,
+    "aac": true,
+    "meanVolumeDB": "-35.5",
+    "maxVolumeDB": "-17.6",
+    "decodedWithoutError": true
+  },
+  {
+    "file": "04-preferences.mp4",
+    "duration": "00:00:23.80",
+    "h264": true,
+    "aac": true,
+    "meanVolumeDB": "-35.5",
+    "maxVolumeDB": "-17.6",
+    "decodedWithoutError": true
+  },
+  {
+    "file": "05-musictag-setup.mp4",
+    "duration": "00:00:26.48",
+    "h264": true,
+    "aac": true,
+    "meanVolumeDB": "-35.3",
+    "maxVolumeDB": "-15.7",
+    "decodedWithoutError": true
+  },
+  {
+    "file": "app-full.mp4",
+    "duration": "00:01:49.96",
+    "h264": true,
+    "aac": true,
+    "meanVolumeDB": "-35.4",
+    "maxVolumeDB": "-15.7",
+    "decodedWithoutError": true
+  },
+  {
+    "file": "musictag-early-full.mp4",
+    "duration": "00:00:33.20",
+    "h264": true,
+    "aac": true,
+    "meanVolumeDB": "-31.2",
+    "maxVolumeDB": "-15.1",
+    "decodedWithoutError": true
+  }
+]

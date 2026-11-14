@@ -39,7 +39,7 @@ Candidate confidence combines recognition quality and agreement between the requ
 
 Plan coverage for Australian English, Cantonese and Mandarin with explicit preference controls. Include code-switching, alternate spellings, translated titles and same-title songs in the test matrix. A language setting sets expectations without promising accent-level accuracy.
 
-Use a push-to-talk interaction and collect the minimum telemetry needed to evaluate it. The production plan should specify processing location, audio retention and deletion before release. Proposed default analytics can record state transitions and elapsed time without raw audio or transcripts. A separately consented study can collect additional material where necessary.
+Use a tap-to-start interaction with explicit stop and cancel actions and collect the minimum telemetry needed to evaluate it. The production plan should specify processing location, audio retention and deletion before release. Proposed default analytics can record state transitions and elapsed time without raw audio or transcripts. A separately consented study can collect additional material where necessary.
 
 ## Delivery sequence
 

@@ -18,6 +18,33 @@ const amount = document.querySelector('#concept-volume');
 const defaults = () => ({ view: 'welcome', playing: false, list: '', track: 0, volume: 65 });
 let state = defaults();
 
+// A quiet synthesised preview makes play, pause, skip and volume tangible.
+// This is deliberately not a recording of any of the named catalogue songs.
+let audio, gain, timer, step = 0;
+const notes = [0,4,7,11,7,4,2,7];
+function stopSound() { clearInterval(timer); timer = null; if(gain) gain.gain.setValueAtTime(0,audio.currentTime); }
+function syncSound() {
+  if (!state.playing || !state.list) { stopSound(); return; }
+  try {
+    audio ||= new (window.AudioContext || window.webkitAudioContext)();
+    if (!gain) { gain = audio.createGain(); gain.connect(audio.destination); }
+    audio.resume();
+    gain.gain.setValueAtTime(state.volume / 100 * .13,audio.currentTime);
+    if (timer) return;
+    const tick = () => {
+      if(!state.playing) return;
+      const osc = audio.createOscillator(), envelope = audio.createGain();
+      const at = audio.currentTime;
+      osc.type='sine'; osc.frequency.value=220*Math.pow(2,(notes[step++ % notes.length]+state.track*2)/12);
+      envelope.gain.setValueAtTime(0,at); envelope.gain.linearRampToValueAtTime(.8,at+.025); envelope.gain.exponentialRampToValueAtTime(.001,at+.36);
+      osc.connect(envelope); envelope.connect(gain); osc.start(at); osc.stop(at+.38);
+    };
+    tick(); timer=setInterval(tick,420);
+  } catch { /* All controls remain usable when browser audio is unavailable. */ }
+}
+document.addEventListener('musictag:pause',()=>{state.playing=false;stopSound();render()});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){state.playing=false;stopSound();render()}});
+
 const art = (name, css = '') => `<img src="../assets/art/${name}.webp" alt="" class="${css}">`;
 const press = (key,label,css) => `<button class="${css}" type="button" data-action="${key}">${label}</button>`;
 function render(focusKey) {
@@ -36,6 +63,7 @@ function render(focusKey) {
   button.setAttribute('aria-label',state.playing ? 'Pause' : 'Play');
   amount.value = state.volume + '%';
   status.textContent = song ? `${state.playing ? 'Playing' : 'Paused'} · ${song[0]}` : 'Choose a playlist on the phone to start.';
+  document.querySelector('.disc-remote').classList.toggle('is-playing',state.playing);
   if (focusKey) ui.querySelector(`[data-action="${focusKey}"]`)?.focus({ preventScroll:true });
 }
 document.querySelector('.concept-stage').addEventListener('click',event => {
@@ -63,5 +91,6 @@ document.querySelector('.concept-stage').addEventListener('click',event => {
     }
   }
   render(focusKey);
+  syncSound();
 });
 render();

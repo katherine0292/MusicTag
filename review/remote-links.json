@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://katherine0292.github.io/MusicTag/",
+    "status": 200,
+    "final": "https://katherine0292.github.io/MusicTag/"
+  },
+  {
+    "url": "https://katherine0292.github.io/MusicTag/prototype/",
+    "status": 200,
+    "final": "https://katherine0292.github.io/MusicTag/prototype/"
+  },
+  {
+    "url": "https://katherine0292.github.io/MusicTag/early-concept/",
+    "status": 200,
+    "final": "https://katherine0292.github.io/MusicTag/early-concept/"
+  },
+  {
+    "url": "https://katherine0292.github.io/MusicTag/gallery/",
+    "status": 200,
+    "final": "https://katherine0292.github.io/MusicTag/gallery/"
+  },
+  {
+    "url": "https://katherine0292.github.io/the-listening-room/prototype/",
+    "status": 404,
+    "final": "https://katherine0292.github.io/the-listening-room/prototype/"
+  },
+  {
+    "url": "https://github.com/katherine0292/MusicTag",
+    "status": 200,
+    "final": "https://github.com/katherine0292/MusicTag"
+  }
+]

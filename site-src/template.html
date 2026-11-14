@@ -13,7 +13,7 @@
 <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Chapters"><div class="mh"><span class="word">THE LISTENING ROOM</span><button id="menu-close">✕</button></div><ol id="menu-list"></ol></div>
 
 <div class="sheet">
-<section class="banner" id="hero" aria-label="The Listening Room"><img id="bn-img" src="img/poster.jpg" alt="The Listening Room. An independent commission by Katherine Lin. Find your way back to a familiar song." fetchpriority="high"></section>
+<section class="banner" id="hero" aria-label="The Listening Room"><img id="bn-img" src="img/cover-landscape-v2.webp" width="2172" height="724" alt="The Listening Room. An independent commission by Katherine Lin. Familiar music. Within reach." fetchpriority="high"></section>
 
 <!-- 01 overview -->
 <section class="ch intro" id="c-overview" data-nav="nav.ov">
@@ -23,11 +23,7 @@
         <p class="lbl">The Listening Room</p>
         <h1 data-k="hero.title"></h1>
         <p class="sub" data-k="hero.sub"></p>
-        <div class="btns">
-          <a class="btn dk" href="prototype/" target="_blank" rel="noopener" data-k="cta.proto"></a>
-          <a class="btn" href="gallery/" target="_blank" rel="noopener" data-k="cta.gallery"></a>
-          <a class="btn" href="early-concept/" target="_blank" rel="noopener" data-k="cta.concept"></a>
-        </div>
+
       </div>
       <div class="deck" aria-hidden="true">
         <div class="vinyl"><i></i><b></b></div>
@@ -49,20 +45,42 @@
   </div>
 </section>
 
+<!-- Live experience: the work can be operated without leaving the case study. -->
+<section class="ch experience" id="c-experience" data-nav="nav.xp">
+  <div class="wrap">
+    <div class="head"><div class="row"><span class="no">02</span><span class="lbl" data-k="live.label"></span></div><h2><span class="mask"><span data-k="live.title"></span></span></h2><p class="lede rv" data-k="live.desc"></p></div>
+    <div class="live-shell"><div class="live-label"><span class="live-dot"></span><span data-k="live.status"></span></div>
+      <iframe class="live-frame" id="app-frame" src="prototype/?embed=1" title="The Listening Room fully interactive app prototype with sound and MusicTag setup" loading="lazy" allow="autoplay" height="880"></iframe>
+    </div>
+    <p class="live-note" data-k="live.note"></p>
+    <details class="recordings" id="recordings"><summary data-k="film.summary"></summary>
+      <div class="film-layout"><div class="film-menu" role="group" aria-label="Recorded feature demonstrations">
+        <button data-film="app-full" aria-pressed="true" data-k="film.full"></button>
+        <button data-film="01-listening" aria-pressed="false" data-k="film.listen"></button>
+        <button data-film="02-search-recovery" aria-pressed="false" data-k="film.search"></button>
+        <button data-film="03-family" aria-pressed="false" data-k="film.family"></button>
+        <button data-film="04-preferences" aria-pressed="false" data-k="film.prefs"></button>
+        <button data-film="05-musictag-setup" aria-pressed="false" data-k="film.setup"></button>
+        <button data-film="musictag-early-full" aria-pressed="false" data-k="film.hardware"></button>
+      </div><div><video id="walkthrough" controls playsinline preload="none" poster="assets/recordings/app-poster.jpg"><source src="assets/recordings/app-full.mp4" type="video/mp4"><track id="film-captions" kind="captions" src="assets/recordings/app-full.vtt" srclang="en" label="English" default></video><p class="live-note" data-k="film.note"></p></div></div>
+    </details>
+  </div>
+</section>
+
 <!-- 02 research -->
 <section class="ch alt" id="c-research" data-nav="nav.rs">
   <div class="wrap">
-    <div class="head"><div class="row"><span class="no">02</span><span class="lbl" data-k="rs.label"></span></div><h2><span class="mask"><span data-k="rs.title"></span></span></h2><p class="lede rv" data-k="rs.lede"></p></div>
+    <div class="head"><div class="row"><span class="no">03</span><span class="lbl" data-k="rs.label"></span></div><h2><span class="mask"><span data-k="rs.title"></span></span></h2><p class="lede rv" data-k="rs.lede"></p></div>
     <div class="body">
       <div class="g2 rv" style="margin-bottom:44px">
         <div class="card">
           <span class="lbl k" data-k="rs.ev.k"></span>
-          <div class="bars">
-            <div class="bar" style="--w:100%"><span data-k="rs.ev1"></span><span class="v num">13</span><div class="tk"><i></i></div></div>
-            <div class="bar" style="--w:38%"><span data-k="rs.ev2"></span><span class="v num">5</span><div class="tk"><i></i></div></div>
-            <div class="bar" style="--w:15%"><span data-k="rs.ev3"></span><span class="v num">2</span><div class="tk"><i></i></div></div>
-            <div class="bar" style="--w:8%"><span data-k="rs.ev4"></span><span class="v num">1</span><div class="tk"><i></i></div></div>
-          </div>
+          <dl class="evidence-counts">
+            <div><dt data-k="rs.ev1"></dt><dd>13</dd></div>
+            <div><dt data-k="rs.ev2"></dt><dd>5</dd></div>
+            <div><dt data-k="rs.ev3"></dt><dd>2</dd></div>
+            <div><dt data-k="rs.ev4"></dt><dd>1</dd></div>
+          </dl>
         </div>
         <div class="card">
           <span class="lbl k" data-k="rs.pers.k"></span>
@@ -88,7 +106,7 @@
 <!-- 03 decisions -->
 <section class="ch" id="c-decisions" data-nav="nav.dc">
   <div class="wrap">
-    <div class="head"><div class="row"><span class="no">03</span><span class="lbl" data-k="dc.label"></span></div><h2><span class="mask"><span data-k="dc.title"></span></span></h2><p class="lede rv" data-k="dc.lede"></p></div>
+    <div class="head"><div class="row"><span class="no">04</span><span class="lbl" data-k="dc.label"></span></div><h2><span class="mask"><span data-k="dc.title"></span></span></h2><p class="lede rv" data-k="dc.lede"></p></div>
     <div class="body">
       <div class="cmp rv">
         <div class="cmp-a">
@@ -107,25 +125,18 @@
       </div>
 
       <span class="lbl k rv" style="margin-top:56px" data-k="dc.split.k"></span>
-      <div class="split rv">
-        <div class="sp-card">
-          <h3 data-k="dc.ph.t"></h3>
-          <ul><li data-k="dc.ph.1"></li><li data-k="dc.ph.2"></li><li data-k="dc.ph.3"></li><li data-k="dc.ph.4"></li><li data-k="dc.ph.5"></li></ul>
-        </div>
-        <div class="link" aria-hidden="true"><span></span><span></span><span></span></div>
-        <div class="sp-card tag">
-          <h3 data-k="dc.tg.t"></h3>
-          <div class="remote" aria-hidden="true"><b class="rp">▶‖</b><b class="rk l">|◀</b><b class="rk r">▶|</b><b class="rv1">+</b><b class="rv2">−</b></div>
-          <ul><li data-k="dc.tg.1"></li><li data-k="dc.tg.2"></li><li data-k="dc.tg.3"></li><li data-k="dc.tg.4"></li><li data-k="dc.tg.5"></li></ul>
-        </div>
+      <p class="lede" data-k="live.early.desc"></p>
+      <div class="live-shell early-shell"><div class="live-label"><span class="live-dot"></span><span data-k="live.early.label"></span></div>
+        <iframe class="live-frame" id="early-frame" src="early-concept/?embed=1" title="Early Spotify Ease and MusicTag interactive hardware concept" loading="lazy" allow="autoplay" height="680"></iframe>
       </div>
+      <p class="live-note" data-k="live.early.note"></p>
 
       <span class="lbl k rv" style="margin-top:56px" data-k="dc.ev.k"></span>
       <div class="evo rv">
-        <figure><div class="fig wide" data-zoom="img/archive/original-interface.jpg"><img src="img/archive/original-interface.jpg" alt="" loading="lazy"></div><figcaption data-k="dc.ev1"></figcaption></figure>
-        <figure><div class="fig wide" data-zoom="img/archive/controller-sketch.jpg"><img src="img/archive/controller-sketch.jpg" alt="" loading="lazy"></div><figcaption data-k="dc.ev2"></figcaption></figure>
-        <figure><div class="fig wide" data-zoom="img/archive/paper-controller.jpg"><img src="img/archive/paper-controller.jpg" alt="" loading="lazy"></div><figcaption data-k="dc.ev3"></figcaption></figure>
-        <figure><div class="fig wide" data-zoom="img/archive/physical-controller.jpg"><img src="img/archive/physical-controller.jpg" alt="" loading="lazy"></div><figcaption data-k="dc.ev4"></figcaption></figure>
+        <figure><div class="fig wide" data-zoom="img/archive/original-interface.jpg"><img src="img/archive/original-interface.jpg" alt="Early mobile interface, three initial screens" loading="lazy"></div><figcaption data-k="dc.ev1"></figcaption></figure>
+        <figure><div class="fig wide" data-zoom="img/archive/controller-sketch.jpg"><img src="img/archive/controller-sketch.jpg" alt="MusicTag hand sketch with key ring, centre playback and side volume controls" loading="lazy"></div><figcaption data-k="dc.ev2"></figcaption></figure>
+        <figure><div class="fig wide" data-zoom="img/archive/paper-controller.jpg"><img src="img/archive/paper-controller.jpg" alt="Paper MusicTag interaction mockup" loading="lazy"></div><figcaption data-k="dc.ev3"></figcaption></figure>
+        <figure><div class="fig wide" data-zoom="img/archive/physical-controller.jpg"><img src="img/archive/physical-controller.jpg" alt="MusicTag concept visualisation beside a phone" loading="lazy"></div><figcaption data-k="dc.ev4"></figcaption></figure>
       </div>
 
       <span class="lbl k rv" style="margin-top:56px" data-k="dc.dec.k"></span>
@@ -154,19 +165,21 @@
 <!-- 04 screens -->
 <section class="ch alt" id="c-screens" data-nav="nav.sc">
   <div class="wrap">
-    <div class="head"><div class="row"><span class="no">04</span><span class="lbl" data-k="sc.label"></span></div><h2><span class="mask"><span data-k="sc.title"></span></span></h2><p class="lede rv" data-k="sc.lede"></p></div>
+    <div class="head"><div class="row"><span class="no">05</span><span class="lbl" data-k="sc.label"></span></div><h2><span class="mask"><span data-k="sc.title"></span></span></h2><p class="lede rv" data-k="sc.lede"></p></div>
   </div>
   <div class="body">
+    <details class="screen-details wrap"><summary data-k="sc.expand"></summary>
     <div class="wrap"><div class="jtabs" id="jtabs" role="tablist"></div></div>
     <div class="strip" id="strip" tabindex="0"></div>
     <div class="wrap"><div class="sprog"><i id="sprog"></i></div></div>
+    </details>
   </div>
 </section>
 
 <!-- 05 voice search -->
 <section class="ch" id="c-voice" data-nav="nav.vo">
   <div class="wrap">
-    <div class="head"><div class="row"><span class="no">05</span><span class="lbl" data-k="vo.label"></span><span class="tg">AI</span></div><h2><span class="mask"><span data-k="vo.title"></span></span></h2><p class="lede rv" data-k="vo.lede"></p></div>
+    <div class="head"><div class="row"><span class="no">06</span><span class="lbl" data-k="vo.label"></span><span class="tg">AI</span></div><h2><span class="mask"><span data-k="vo.title"></span></span></h2><p class="lede rv" data-k="vo.lede"></p></div>
     <div class="body">
       <span class="lbl k rv" data-k="vo.pp.k"></span>
       <div class="pipe rv">
@@ -225,7 +238,7 @@
 <!-- 06 evaluation -->
 <section class="ch alt" id="c-eval" data-nav="nav.ev">
   <div class="wrap">
-    <div class="head"><div class="row"><span class="no">06</span><span class="lbl" data-k="ev.label"></span></div><h2><span class="mask"><span data-k="ev.title"></span></span></h2></div>
+    <div class="head"><div class="row"><span class="no">07</span><span class="lbl" data-k="ev.label"></span></div><h2><span class="mask"><span data-k="ev.title"></span></span></h2></div>
     <div class="body">
       <span class="lbl k rv" data-k="ev.st.k"></span>
       <div class="ladder rv">
@@ -265,7 +278,7 @@
 <!-- 07 scope -->
 <section class="ch" id="c-scope" data-nav="nav.sp">
   <div class="wrap">
-    <div class="head"><div class="row"><span class="no">07</span><span class="lbl" data-k="sp.label"></span></div><h2><span class="mask"><span data-k="sp.title"></span></span></h2></div>
+    <div class="head"><div class="row"><span class="no">08</span><span class="lbl" data-k="sp.label"></span></div><h2><span class="mask"><span data-k="sp.title"></span></span></h2></div>
     <div class="body">
       <div class="cols3 rv">
         <div class="c ok"><h3 data-k="sp.c1.t"></h3><ul><li data-k="sp.c1.1"></li><li data-k="sp.c1.2"></li><li data-k="sp.c1.3"></li><li data-k="sp.c1.4"></li><li data-k="sp.c1.5"></li><li data-k="sp.c1.6"></li></ul></div>

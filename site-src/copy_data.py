@@ -189,3 +189,34 @@ C = {
 "ft.copied": ("已复制", "Copied"),
 "ui.close": ("关闭", "Close"),
 }
+
+C.update({
+"nav.xp": ("实操体验", "Try it live"),
+"live.label": ("实操体验", "Live experience"),
+"live.title": ("亲手找一首歌，听见设计的回应", "Find a song. Hear the response."),
+"live.desc": ("从 Get started 开始自由探索，或选择一个情境：找熟悉的歌、邀请家人、从语音误识别或配对失败中恢复。手机界面可直接操作，无需离开作品集。", "Start with Get started and explore freely, or choose a scenario: find a familiar song, invite family, recover from a voice miss or a pairing failure. Operate the phone right here."),
+"live.status": ("页内可操作 · 点击播放后开启声音", "Live prototype · Tap Play to hear audio"),
+"live.note": ("声音为合成演示音，并非歌曲录音。语音、蓝牙配对、邀请和音箱切换均为本地模拟；原型不会录制麦克风。离开实操区域后声音会暂停。", "Audio is a synthesised preview, not a recording of the named song. Speech, Bluetooth pairing, invitations and speaker routing are simulated; no microphone is recorded. Audio pauses when this demo leaves view."),
+"live.early.desc": ("在下面的早期原型中，用手机选择歌单，再直接操作右侧 MusicTag 的五个控件。手机显示当前歌曲与播放状态，遥控器负责日常控制。", "Choose a playlist on the phone below, then try MusicTag’s five controls. The phone shows the current track and playback state; the remote handles everyday control."),
+"live.early.label": ("早期硬件概念 · 手机与 MusicTag 联动", "Early hardware concept · Phone + MusicTag"),
+"live.early.note": ("这是仓库 early-concept 的真实可操作浏览器模拟，不是实体蓝牙设备。保留原始交互流程，并补充合成声音反馈。", "This is the working early-concept browser simulation from the repository, not a physical Bluetooth device. The original flow is preserved, with synthesised audio feedback added."),
+"film.summary": ("按功能观看操作录屏", "Watch the recorded walkthroughs"),
+"film.full": ("完整 App 流程", "Full app walkthrough"),
+"film.listen": ("01 选歌与播放", "01 Choose and play"),
+"film.search": ("02 搜索与失败恢复", "02 Search and recovery"),
+"film.family": ("03 家人歌单与邀请", "03 Family and invitations"),
+"film.prefs": ("04 输出与偏好", "04 Output and preferences"),
+"film.setup": ("05 MusicTag 配对与练习", "05 MusicTag setup and practice"),
+"film.hardware": ("早期硬件完整实操", "Full early hardware demo"),
+"film.note": ("实际浏览器操作录屏，含合成声音与英文字幕。可切换功能片段，也可观看完整流程。", "Recorded browser interactions with synthesised audio and English captions. Choose a feature clip or watch the complete flow."),
+"sc.expand": ("展开六条旅程与全部 24 张界面", "Explore all 24 screens across six journeys"),
+})
+# The public interaction is tap-to-start, not press-and-hold.
+C["vo.c2.d"] = ("点击后才开始聆听。拟定的默认分析只记录状态变化和耗时，不保存原始音频或转写文字。", "Listening begins on a tap. Proposed default analytics record state changes and elapsed time, not raw audio or transcripts.")
+C["dc.ev.k"] = ("早期界面、草图与概念模型", "Early interface, sketch and concept mockups")
+C["dc.ev4"] = ("设备概念效果图", "Device concept visualisation")
+
+for _key in ["cta.proto", "cta.gallery", "cta.concept", "dc.ph.t", "dc.tg.t"] + [f"dc.ph.{i}" for i in range(1,6)] + [f"dc.tg.{i}" for i in range(1,6)]:
+    C.pop(_key, None)
+
+C["ui.enlarge"] = ("放大查看", "Enlarge image")
