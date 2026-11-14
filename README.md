@@ -6,7 +6,7 @@ The Listening Room is an accessible music concept for adults aged 65 and over. I
 
 [**Open the interactive prototype**](https://katherine0292.github.io/the-listening-room/prototype/) · [Project brief summary](docs/project-brief.md) · [Browse all 24 screens](https://katherine0292.github.io/the-listening-room/gallery/)
 
-[![The Listening Room. An older listener presses the MusicTag play button beside a cobalt vinyl record.](assets/listening-room-poster.webp)](assets/listening-room-poster.webp)
+[![The Listening Room. An angled iPhone shows the Now Playing prototype on a cobalt record beside MusicTag, with a Spotify seal on the record sleeve.](assets/listening-room-poster.webp)](assets/listening-room-poster.webp)
 
 ## Commission and scope
 
