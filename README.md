@@ -72,7 +72,7 @@ The next round measures independent task completion, correct-song selection, ret
 
 | Path | Contents |
 |---|---|
-| `index.html`, `assets/portfolio.*` | Portfolio page (English and Chinese) |
+| `index.html`, `img/`, `site-src/` | Portfolio page (English and Chinese). Edit copy in `site-src/copy_data.py`, then run `python3 build.py` inside `site-src/` |
 | `prototype/` | High-fidelity interactive prototype |
 | `early-concept/` | Original three-screen flow and MusicTag simulation |
 | `gallery/` | 24 iOS screens grouped into six journeys |

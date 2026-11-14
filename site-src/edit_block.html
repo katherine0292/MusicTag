@@ -1,0 +1,177 @@
+<!-- ===== Edit mode: pick any block, change text and type, save to edits.json ===== -->
+<style>
+html.cu-wait .sheet,html.cu-wait footer{opacity:0}
+.sheet,footer{transition:opacity .25s}
+#ed-fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:210;display:none;align-items:center;gap:8px;padding:11px 18px;border-radius:99px;background:var(--ink);color:var(--paper);font-size:13.5px;font-weight:500;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+#ed-fab.show{display:flex}
+html.editing #ed-fab{right:calc(360px + 18px)}
+#ed-hl{position:fixed;z-index:205;pointer-events:none;border:1.5px dashed var(--acc);background:color-mix(in srgb,var(--acc) 7%,transparent);border-radius:6px;display:none;transition:all .08s}
+#ed-sel{position:fixed;z-index:206;pointer-events:none;border:2px solid var(--acc);border-radius:6px;display:none}
+#ed-sel span{position:absolute;left:-2px;top:-24px;background:var(--acc);color:#fff;font:500 11px/1 var(--f);padding:5px 7px;border-radius:5px 5px 5px 0;white-space:nowrap;max-width:280px;overflow:hidden;text-overflow:ellipsis}
+#ed-panel{position:fixed;top:0;right:0;bottom:0;width:360px;z-index:220;background:var(--paper);color:var(--ink);border-left:1px solid var(--line-2);box-shadow:-12px 0 40px rgba(0,0,0,.08);display:none;flex-direction:column;font:14px/1.5 var(--f)}
+html.editing #ed-panel{display:flex}
+html.editing body{padding-right:360px}
+html.editing *{cursor:crosshair}
+html.editing #ed-panel *{cursor:auto}
+html.editing #ed-panel button,html.editing #ed-panel select,html.editing #ed-panel input[type=range],html.editing #ed-fab{cursor:pointer}
+#ed-panel header{padding:16px 18px 12px;border-bottom:1px solid var(--line)}
+#ed-panel header b{font-size:15px;font-weight:600}
+#ed-panel header p{font-size:12.5px;color:var(--ink-2);margin-top:4px}
+#ed-body{flex:1;overflow:auto;padding:14px 18px 20px}
+#ed-body .grp{margin-bottom:18px}
+#ed-body .gt{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-bottom:8px}
+#ed-body label{display:block;font-size:12.5px;color:var(--ink-2);margin:8px 0 4px}
+#ed-body textarea{width:100%;min-height:70px;resize:vertical;font:14px/1.5 var(--f);color:var(--ink);background:var(--paper-2);border:1px solid var(--line-2);border-radius:10px;padding:8px 10px}
+#ed-body .row{display:grid;grid-template-columns:86px 1fr 64px;align-items:center;gap:8px;margin:7px 0}
+#ed-body .row>span{font-size:12.5px;color:var(--ink-2)}
+#ed-body .row input[type=number],#ed-body .row select,#ed-body .row input[type=text]{width:100%;font:13px var(--f);color:var(--ink);background:var(--paper-2);border:1px solid var(--line-2);border-radius:8px;padding:5px 7px}
+#ed-body .row input[type=range]{width:100%;accent-color:var(--acc)}
+#ed-body .row input[type=color]{width:100%;height:30px;border:1px solid var(--line-2);border-radius:8px;background:none;padding:2px}
+#ed-body .row .x{font-size:12px;color:var(--ink-3);text-align:right}
+#ed-body .row .x:hover{color:var(--bad)}
+#ed-body .empty{color:var(--ink-2);font-size:13.5px;line-height:1.7;padding:6px 0}
+#ed-body .path{font:12px/1.4 ui-monospace,Menlo,monospace;color:var(--ink-3);word-break:break-all;margin-bottom:10px}
+#ed-body .btns{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.ed-b{padding:6px 11px;border-radius:99px;border:1px solid var(--line-2);font-size:12.5px;color:var(--ink)}
+.ed-b:hover{border-color:var(--acc);color:var(--acc-ink)}
+.ed-b.pri{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.ed-b.pri:disabled{opacity:.4}
+#ed-panel footer{padding:12px 18px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);display:flex;align-items:center;gap:8px;background:var(--paper);margin:0}
+#ed-status{flex:1;font-size:12.5px;color:var(--ink-2)}
+@media (max-width:760px){
+  #ed-panel{top:auto;width:auto;left:0;height:52vh;border-left:0;border-top:1px solid var(--line-2);border-radius:18px 18px 0 0}
+  html.editing body{padding-right:0;padding-bottom:52vh}
+  html.editing #ed-fab{right:18px;bottom:calc(52vh + 12px)}
+}
+</style>
+<button id="ed-fab" type="button">✎ <span id="ed-fab-t">编辑页面</span></button>
+<div id="ed-hl"></div><div id="ed-sel"><span></span></div>
+<aside id="ed-panel" aria-label="编辑面板">
+  <header><b>编辑页面</b><p>点页面上任意一块来选中它。右上角“中 / EN”照常可切换。改动先在这里预览，点“保存”后才会写进网页。</p></header>
+  <div id="ed-body"></div>
+  <footer><span id="ed-status">没有未保存的改动</span><button class="ed-b" id="ed-discard" type="button">放弃</button><button class="ed-b pri" id="ed-save" type="button" disabled>保存</button></footer>
+</aside>
+<script>
+(function(){
+const R=document.documentElement,$=s=>document.querySelector(s);
+const UI=['#ed-fab','#ed-panel','#ed-hl','#ed-sel'];
+const isUI=el=>UI.some(s=>el.closest&&el.closest(s));
+const ORIG=JSON.parse(JSON.stringify(CU.COPY));
+let E={v:1,text:{},style:{}};      // saved + pending edits
+let dirty=false,sel=null,art=null,canSave=false,localOnly=false;
+const LS='cu-edits-local';
+const gs=k=>{try{return localStorage.getItem(k)}catch(e){return null}},ss=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
+
+/* ---------- apply ---------- */
+const PROPS=[
+ // key, label, css, unit, input type, min, max, step
+ ['fs','字号','font-size','px','num',8,200,1],
+ ['fw','字重','font-weight','','sel',['300','400','500','600','700']],
+ ['lh','行高','line-height','','num',0.8,3,0.05],
+ ['ls','字间距','letter-spacing','em','num',-0.1,0.4,0.005],
+ ['ta','对齐','text-align','','sel',['left','center','right']],
+ ['c','文字颜色','color','','color'],
+ ['bg','背景色','background-color','','color'],
+ ['mt','上间距','margin-top','px','num',-200,400,2],
+ ['mb','下间距','margin-bottom','px','num',-200,400,2],
+ ['mw','最大宽度','max-width','px','num',40,2000,10],
+ ['op','透明度','opacity','','num',0,1,0.05],
+];
+function css(){let out='';for(const [s,p] of Object.entries(E.style)){const d=[];
+  for(const [k,v] of Object.entries(p)){if(k==='hide'){if(v)d.push('display:none');continue}const P=PROPS.find(x=>x[0]===k);if(P&&v!==''&&v!=null)d.push(`${P[2]}:${v}${P[3]}`)}
+  if(d.length)out+=`${s}{${d.map(x=>x+' !important').join(';')}}\n`}return out}
+function applyStyle(){let st=$('#cu-edits');if(!st){st=document.createElement('style');st.id='cu-edits';document.head.appendChild(st)}st.textContent=css();place()}
+function applyText(keys){const L=CU.lang()==='en'?1:0;(keys||Object.keys(E.text)).forEach(k=>{const v=E.text[k];CU.COPY[k]=v?[v[0],v[1]]:ORIG[k];
+  document.querySelectorAll(`[data-k="${CSS.escape(k)}"]`).forEach(el=>{if(!isUI(el))el.innerHTML=CU.COPY[k][L]})})}
+function load(data){if(data&&typeof data==='object'){E={v:1,text:data.text||{},style:data.style||{}}}applyText();CU.rerender();applyStyle()}
+
+/* ---------- selectors ---------- */
+function path(el){if(el.id)return '#'+CSS.escape(el.id);if(el.dataset.k){const q=`[data-k="${CSS.escape(el.dataset.k)}"]`;if(document.querySelectorAll(q).length===1)return q}const parts=[];let n=el;
+  while(n&&n!==document.body&&n!==R){if(n.id){parts.unshift('#'+CSS.escape(n.id));break}const p=n.parentElement;if(!p)break;
+    parts.unshift(`${n.tagName.toLowerCase()}:nth-child(${[...p.children].indexOf(n)+1})`);n=p}
+  if(n===document.body)parts.unshift('body');return parts.join('>')}
+function label(el){const k=el.closest('[data-k]');const tag=el.tagName.toLowerCase();const cls=[...el.classList].filter(c=>!['revealed','on','rv'].includes(c)).slice(0,2).join('.');
+  return tag+(cls?'.'+cls:'')+(k?'  ·  '+k.dataset.k:'')}
+
+/* ---------- highlight ---------- */
+function box(node,el){if(!el||!document.contains(el)){node.style.display='none';return}const r=el.getBoundingClientRect();
+  Object.assign(node.style,{display:'block',left:r.left-3+'px',top:r.top-3+'px',width:r.width+6+'px',height:r.height+6+'px'})}
+function place(){if(sel&&!document.contains(sel)&&sel._p){sel=document.querySelector(sel._p)||null}box($('#ed-sel'),sel);if(sel)$('#ed-sel span').textContent=label(sel)}
+let hov=null;
+document.addEventListener('mousemove',e=>{if(!R.classList.contains('editing'))return;const el=e.target;if(isUI(el)||el===document.body||el===R){$('#ed-hl').style.display='none';return}if(el!==hov){hov=el;box($('#ed-hl'),el)}},true);
+addEventListener('scroll',()=>{if(!R.classList.contains('editing'))return;place();if(hov)box($('#ed-hl'),hov)},{passive:true});
+addEventListener('resize',place);
+
+/* ---------- pick ---------- */
+['click','pointerdown','mousedown'].forEach(tp=>document.addEventListener(tp,e=>{if(!R.classList.contains('editing')||isUI(e.target)||e.target.closest('.langs'))return;
+  e.preventDefault();e.stopPropagation();if(tp==='click')pick(e.target)},true));
+function pick(el){if(!el||el===document.body||el===R)return;sel=el;sel._p=path(el);place();panel()}
+
+/* ---------- panel ---------- */
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function cur(p){const cs=getComputedStyle(sel);const v=cs.getPropertyValue(p[2]);
+  if(p[4]==='color'){const m=v.match(/\d+(\.\d+)?/g);if(!m)return '#000000';return '#'+m.slice(0,3).map(x=>(+x).toString(16).padStart(2,'0')).join('')}
+  if(p[0]==='lh'){const fs=parseFloat(cs.fontSize);const lh=parseFloat(v);return isNaN(lh)?1.5:+(lh/fs).toFixed(2)}
+  if(p[0]==='ls'){const fs=parseFloat(cs.fontSize);const n=parseFloat(v);return isNaN(n)?0:+(n/fs).toFixed(3)}
+  if(p[0]==='mw'){return v==='none'?'':parseFloat(v)}
+  if(p[3]==='px')return Math.round(parseFloat(v)||0);
+  if(p[0]==='fw')return String(Math.round(+v/100)*100);
+  return v}
+function panel(){const b=$('#ed-body');
+  if(!sel){b.innerHTML=`<div class="empty">把鼠标移到页面上，虚线框是可以选中的区域。点一下就能在这里改：<br>· 文字（中文和英文分开改）<br>· 字号、字重、行高、字间距<br>· 颜色、对齐、间距、宽度<br>· 隐藏这一块<br><br>选中后可以点“上一层”选到外面更大的那一块。</div>`;return}
+  const p=sel._p,S=E.style[p]||{},k=sel.closest('[data-k]');
+  let h=`<div class="path">${esc(label(sel))}</div><div class="btns"><button class="ed-b" data-a="up">↑ 上一层</button>${sel.firstElementChild?'<button class="ed-b" data-a="down">↓ 里一层</button>':''}<button class="ed-b" data-a="reset">还原这一块</button><button class="ed-b" data-a="none">取消选中</button></div>`;
+  if(k){const key=k.dataset.k,v=E.text[key]||CU.COPY[key];
+    h+=`<div class="grp"><div class="gt">文字 · ${esc(key)}</div><label>中文</label><textarea data-t="0">${esc(v[0])}</textarea><label>English</label><textarea data-t="1">${esc(v[1])}</textarea>
+    <div class="btns" style="margin:8px 0 0">${E.text[key]?'<button class="ed-b" data-a="rtext">还原文字</button>':''}<span style="font-size:12px;color:var(--ink-3)">换行用 &lt;br&gt;</span></div></div>`}
+  h+=`<div class="grp"><div class="gt">样式</div>`;
+  PROPS.forEach(P=>{const set=S[P[0]]!=null&&S[P[0]]!=='';const val=set?S[P[0]]:cur(P);let inp;
+    if(P[4]==='num')inp=`<input type="number" data-p="${P[0]}" value="${val}" min="${P[5]}" max="${P[6]}" step="${P[7]}">`;
+    else if(P[4]==='sel')inp=`<select data-p="${P[0]}">${P[5].map(o=>`<option${String(val)===o?' selected':''}>${o}</option>`).join('')}</select>`;
+    else inp=`<input type="color" data-p="${P[0]}" value="${val}">`;
+    h+=`<div class="row"><span>${P[1]}${P[3]?` <small style="color:var(--ink-3)">${P[3]}</small>`:''}</span>${inp}${set?`<button class="x" data-x="${P[0]}">清除</button>`:'<span></span>'}</div>`});
+  h+=`<div class="row"><span>隐藏</span><label style="margin:0"><input type="checkbox" data-p="hide"${S.hide?' checked':''}> 不显示这一块</label><span></span></div></div>`;
+  b.innerHTML=h;
+  b.querySelectorAll('[data-p]').forEach(i=>i.addEventListener('input',()=>{const st=E.style[p]=E.style[p]||{};st[i.dataset.p]=i.type==='checkbox'?i.checked:i.value;applyStyle();mark();
+    const row=i.closest('.row');if(row&&row.lastElementChild.tagName==='SPAN'&&i.type!=='checkbox'){const x=document.createElement('button');x.className='x';x.dataset.x=i.dataset.p;x.textContent='清除';row.lastElementChild.replaceWith(x)}}));
+  b.querySelectorAll('[data-t]').forEach(ta=>ta.addEventListener('input',()=>{const key=k.dataset.k;const v=E.text[key]||[...CU.COPY[key]];v[+ta.dataset.t]=ta.value;E.text[key]=v;applyText([key]);mark();place()}))}
+$('#ed-body').addEventListener('click',e=>{const x=e.target.closest('[data-x]');if(x){const st=E.style[sel._p];if(st){delete st[x.dataset.x];if(!Object.keys(st).length)delete E.style[sel._p]}applyStyle();mark();panel();return}
+  const a=e.target.closest('[data-a]');if(!a)return;const A=a.dataset.a;
+  if(A==='up'&&sel.parentElement&&sel.parentElement!==document.body)pick(sel.parentElement);
+  else if(A==='down'&&sel.firstElementChild)pick(sel.firstElementChild);
+  else if(A==='none'){sel=null;place();panel()}
+  else if(A==='reset'){delete E.style[sel._p];const k=sel.closest('[data-k]');if(k&&E.text[k.dataset.k]){delete E.text[k.dataset.k];applyText([k.dataset.k])}applyStyle();mark();panel()}
+  else if(A==='rtext'){const key=sel.closest('[data-k]').dataset.k;delete E.text[key];applyText([key]);mark();panel()}});
+
+/* ---------- save ---------- */
+function mark(){dirty=true;$('#ed-save').disabled=false;$('#ed-status').textContent='有未保存的改动'}
+function clean(msg){dirty=false;$('#ed-save').disabled=true;$('#ed-status').textContent=msg}
+$('#ed-save').onclick=async()=>{const body=JSON.stringify(E,null,1);
+  if(localOnly||!art){ss(LS,body);clean('已存在这个浏览器里（本地预览）');return}
+  $('#ed-save').disabled=true;$('#ed-status').textContent='保存中…';
+  try{await art.publish({'edits.json':{content:body,contentType:'application/json'}});clean('已保存，打开链接的人都会看到')}
+  catch(err){const c=err&&err.code;
+    if(c==='conflict'){$('#ed-status').textContent='别处刚保存过，页面正在刷新'}
+    else if(c==='not_writer'||c==='not_granted'||c==='consent_required'){$('#ed-status').textContent='你只有查看权限，不能保存';$('#ed-save').disabled=true}
+    else if(c==='capability_disabled'){ss(LS,body);$('#ed-status').textContent='链接公开分享时无法在页面里保存。已先存在本浏览器；把分享暂时关掉后再点保存。';$('#ed-save').disabled=false}
+    else if(c==='rate_limited'){$('#ed-status').textContent='保存太频繁，稍等几秒再点';$('#ed-save').disabled=false}
+    else{ss(LS,body);$('#ed-status').textContent='没能保存到线上（'+(c||'error')+'），已先存在本浏览器';$('#ed-save').disabled=false}}};
+$('#ed-discard').onclick=()=>{if(!dirty||confirm('放弃所有没保存的改动？')){dirty=false;location.reload()}};
+addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue=''}});
+
+/* ---------- toggle ---------- */
+function setEditing(on){R.classList.toggle('editing',on);$('#ed-fab-t').textContent=on?'完成编辑':'编辑页面';if(!on){sel=null;hov=null;$('#ed-hl').style.display='none';place()}else panel()}
+$('#ed-fab').onclick=()=>setEditing(!R.classList.contains('editing'));
+addEventListener('keydown',e=>{if(e.key==='Escape'&&R.classList.contains('editing')&&sel){sel=null;place();panel()}});
+
+/* ---------- boot ---------- */
+R.classList.add('cu-wait');const reveal=()=>R.classList.remove('cu-wait');setTimeout(reveal,1500);
+fetch('edits.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null).then(d=>{
+  const loc=gs(LS);if(loc&&(!d||true)){try{d=JSON.parse(loc)}catch(e){}}if(d)load(d);reveal()});
+const wantEdit=/(^|[#&])edit\b/.test(location.hash);
+const use=null;
+if(!use){localOnly=true;if(wantEdit){$('#ed-fab').classList.add('show');setEditing(true)}}
+else Promise.all([use('artifact'),use('user')]).then(async([a,u])=>{art=a;let can=false;try{can=!!(a&&u&&await u.canEdit())}catch(e){}
+  if(can||wantEdit){$('#ed-fab').classList.add('show');if(!a)localOnly=true}if(wantEdit&&(can||!a))setEditing(true)});
+})();
+</script>
