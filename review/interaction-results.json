@@ -1,0 +1,17 @@
+{
+  "menuTrap": true,
+  "menuRestore": true,
+  "imageDialog": true,
+  "imageRestore": true,
+  "archiveFit": true,
+  "offscreenPause": "Paused",
+  "video": {
+    "width": 1280,
+    "height": 960,
+    "duration": 109.96,
+    "time": 1.155773,
+    "playing": true,
+    "ready": 4
+  },
+  "closedVideoPaused": true
+}

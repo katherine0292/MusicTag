@@ -1,0 +1,39 @@
+{
+  "recordedOn": "2026-11-15",
+  "type": "Actual browser interaction recording",
+  "audio": "Captured Web Audio synthesised preview",
+  "duration": 108.992,
+  "chapters": [
+    {
+      "id": "01-listening",
+      "title": "Choose and play",
+      "start": 0,
+      "end": 18.065
+    },
+    {
+      "id": "02-search-recovery",
+      "title": "Search and recovery",
+      "start": 18.067,
+      "end": 43.993
+    },
+    {
+      "id": "03-family",
+      "title": "Family playlist and invitation",
+      "start": 43.993,
+      "end": 57.032
+    },
+    {
+      "id": "04-preferences",
+      "title": "Output and preferences",
+      "start": 57.032,
+      "end": 80.825
+    },
+    {
+      "id": "05-musictag-setup",
+      "title": "MusicTag setup and practice",
+      "start": 80.825,
+      "end": 107.289
+    }
+  ],
+  "errors": []
+}

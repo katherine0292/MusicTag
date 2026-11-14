@@ -20,3 +20,12 @@ Read in this order to follow the chain from evidence to decision to evaluation.
 - **Personas** are fictional composites used to evaluate flows.
 - **Prototype behaviour** is simulated: fixed catalogue, synthesised audio, local state. It is not evidence of recognition accuracy.
 - **Success criteria** are hypotheses until a baseline exists.
+
+## Portfolio and media delivery
+
+| Document | Contents |
+| --- | --- |
+| [完整项目梳理与 UX 改进方案（中文）](portfolio-review-zh.md) | 项目定位、素材关系、优先级、改进方案、验收与后续研究 |
+| [Recording notes](recordings.md) | Full app and early hardware videos, feature clips, captions and reproduction |
+| [Link audit](link-audit.md) | Repository rename, old-path 404, current Pages paths and local media references |
+| [Cover generation](cover-generation.md) | 2172 × 724 master, references, tool and exact prompt |

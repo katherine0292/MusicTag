@@ -1086,6 +1086,8 @@
       if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
     }
   });
+  document.addEventListener('musictag:pause',()=>{if(state.playing){pausePlayback();preserveFocus(render)}});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden&&state.playing){pausePlayback();preserveFocus(render)}});
   const savedFields = ['liked','familySongs','sent','inviteRole','size','reduce','language','paired','output','volume'];
   function syncStorage() {
     try {
