@@ -2,7 +2,7 @@
 
 **UX and interaction design for listeners aged 65+ · Independent commission · Katherine Lin**
 
-[Interactive prototype](https://katherine0292.github.io/the-listening-room/prototype/) · [24-screen gallery](https://katherine0292.github.io/the-listening-room/gallery/) · [Early concept](https://katherine0292.github.io/the-listening-room/early-concept/) · [Documentation index](docs/README.md)
+[Interactive prototype](https://katherine0292.github.io/MusicTag/prototype/) · [24-screen gallery](https://katherine0292.github.io/MusicTag/gallery/) · [Early concept](https://katherine0292.github.io/MusicTag/early-concept/) · [Documentation index](docs/README.md)
 
 [![The Listening Room. An independent commission by Katherine Lin. A hand presses the MusicTag remote on a blue vinyl record. Find your way back to a familiar song.](assets/listening-room-cover.jpg)](assets/listening-room-cover.jpg)
 
@@ -35,11 +35,11 @@ Evidence: 13 literature sources, a five-service comparison, two interviews and a
 
 | Observation | Design response | Try it |
 |---|---|---|
-| Familiar music accompanies routines. Losing access interrupts them. | Home shows last played. Library keeps saved music. A mini-player stays in reach. | [Find a familiar song](https://katherine0292.github.io/the-listening-room/prototype/?scenario=find) |
-| Mis-taps and changed controls create doubt. | Stable tabs, labelled transport controls, undo after save or remove, adjustable text and motion. | [Prototype](https://katherine0292.github.io/the-listening-room/prototype/) |
-| Accents and exact-title matching make voice a barrier. | Voice is optional. Listening is visible, candidates are reviewed before playback, and retry or typing is always available. | [Recover from a voice miss](https://katherine0292.github.io/the-listening-room/prototype/?scenario=voice) |
-| Daily control needs stable, marked buttons. | MusicTag has five distinct controls. The phone handles playlist choice and audio output. | [Set up MusicTag](https://katherine0292.github.io/the-listening-room/prototype/?scenario=tag) |
-| Sharing helps, but links add steps. | Family playlists live in Library. Invitations state whether the recipient can listen or add songs. | [Share a family playlist](https://katherine0292.github.io/the-listening-room/prototype/?scenario=family) |
+| Familiar music accompanies routines. Losing access interrupts them. | Home shows last played. Library keeps saved music. A mini-player stays in reach. | [Find a familiar song](https://katherine0292.github.io/MusicTag/prototype/?scenario=find) |
+| Mis-taps and changed controls create doubt. | Stable tabs, labelled transport controls, undo after save or remove, adjustable text and motion. | [Prototype](https://katherine0292.github.io/MusicTag/prototype/) |
+| Accents and exact-title matching make voice a barrier. | Voice is optional. Listening is visible, candidates are reviewed before playback, and retry or typing is always available. | [Recover from a voice miss](https://katherine0292.github.io/MusicTag/prototype/?scenario=voice) |
+| Daily control needs stable, marked buttons. | MusicTag has five distinct controls. The phone handles playlist choice and audio output. | [Set up MusicTag](https://katherine0292.github.io/MusicTag/prototype/?scenario=tag) |
+| Sharing helps, but links add steps. | Family playlists live in Library. Invitations state whether the recipient can listen or add songs. | [Share a family playlist](https://katherine0292.github.io/MusicTag/prototype/?scenario=family) |
 
 ## Key decision: phone plus remote
 

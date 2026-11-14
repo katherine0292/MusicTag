@@ -5,7 +5,7 @@ const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const SC = 'assets/screens/';
-const GH = 'https://github.com/katherine0292/the-listening-room/blob/main/docs/';
+const GH = 'https://github.com/katherine0292/MusicTag/blob/main/docs/';
 let lang = 'zh';
 try { lang = localStorage.getItem('lr-lang') || 'zh'; } catch (e) {}
 const i18 = () => (lang === 'zh' ? 0 : 1);
