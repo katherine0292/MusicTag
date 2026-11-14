@@ -51,7 +51,7 @@ function render(focusKey) {
   const list = state.list ? playlists[state.list] : null;
   const song = list ? songs[list[2][state.track]] : null;
   if (state.view === 'welcome') {
-    ui.innerHTML = art('moon','concept-art') + '<h2>Welcome to Spotify Ease</h2><p>Open your library to choose a playlist.</p>' + press('library','Get started','concept-btn');
+    ui.innerHTML = art('moon','concept-art') + '<h2>Welcome to MusicTag</h2><p>Open your library to choose a playlist.</p>' + press('library','Get started','concept-btn');
   } else if (state.view === 'library') {
     ui.innerHTML = '<h2>Your library</h2>' + Object.entries(playlists).map(([id,[title,cover]]) =>
       press('list-' + id,art(cover) + `<span>${title}</span><span aria-hidden="true">▶</span>`,'concept-playlist')).join('');

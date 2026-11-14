@@ -1,6 +1,6 @@
 # Interview guide and fieldwork summary
 
-**Katherine Lin · The Listening Room**
+**Katherine Lin · MusicTag**
 
 ## Moderator opening
 

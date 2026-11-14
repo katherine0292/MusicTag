@@ -1,6 +1,6 @@
 # Documentation index
 
-**The Listening Room · Katherine Lin**
+**MusicTag · Katherine Lin**
 
 Read in this order to follow the chain from evidence to decision to evaluation.
 

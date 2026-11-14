@@ -1,6 +1,6 @@
 # Voice search: interaction specification
 
-**Katherine Lin · The Listening Room**
+**Katherine Lin · MusicTag**
 
 ## Role and boundary
 

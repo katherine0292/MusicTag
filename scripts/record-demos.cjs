@@ -52,7 +52,7 @@ const time=t=>{const ms=Math.floor(t*1000);return `${String(Math.floor(ms/360000
     await label('05 / Learn the remote by trying it','Pairing failure → retry → connected → play, skip and volume → disconnect');
     await click('case-tag');await click('tag-scan',1200);await click('tag-connect',1500);await click('tag-retry');await click('tag-scan',1200);await click('tag-connect',1500);await click('tag-guide');await click('remote-play');await click('remote-play');await click('guide-skip');await click('remote-next');await click('remote-previous');await click('guide-volume');await click('volume-up');await click('volume-down');await click('guide-done');await click('tag-settings');await click('tag-disconnect');await click('do-disconnect');await click('tab:home');
    });
-   await label('The Listening Room / End of walkthrough','Browser prototype · synthesised audio · simulated services and Bluetooth');await wait(1700);
+   await label('MusicTag / End of walkthrough','Browser prototype · synthesised audio · simulated services and Bluetooth');await wait(1700);
   }else{
    await label('MusicTag / Early hardware concept','Choose music on the phone, then operate the tactile remote. Browser simulation.');await wait(1700);
    await click('library',1000,true);await click('list-liked',1800,true);await p.screenshot({path:path.join(out,'hardware-poster.jpg')});

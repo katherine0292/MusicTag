@@ -1,6 +1,6 @@
 # Project brief
 
-**The Listening Room · Katherine Lin**
+**MusicTag · Katherine Lin**
 
 This summary records the scope of an independently commissioned design project. Katherine Lin led the UX and interaction design.
 

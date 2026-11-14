@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const root = document.getElementById('listening-room-prototype');
+  const root = document.getElementById('musictag-prototype');
   const phone = root.querySelector('#lr-phone');
   const device = root.querySelector('#lr-device');
   const header = root.querySelector('#lr-header');
@@ -90,7 +90,7 @@
     `<div class="lr-vinyl" aria-hidden="true" data-rotating="${rotating}">${image(art)}</div>`;
   const sleeve = (art, label = '', rotating = false) =>
     `<div class="lr-sleeve">${record(art,rotating)}${image(art)}${label ? `<span class="lr-sleeve-label">${esc(label)}</span>` : ''}</div>`;
-  const brand = () => '<span class="lr-brand"><span class="lr-emblem" aria-hidden="true"></span>Spotify Ease</span>';
+  const brand = () => '<span class="lr-brand"><span class="lr-emblem" aria-hidden="true"></span>MusicTag</span>';
   const actions = (...items) => `<div class="lr-actions">${items.join('')}</div>`;
   const now = () => state.path.at(-1);
   const currentTrack = () => tracks[state.current];
@@ -254,7 +254,7 @@
   function welcome() {
     return `<div class="lr-welcome">
       <div class="lr-welcome-art lr-rings"><span class="lr-eyebrow">Side A / 01</span>${image('vinyl','Three overlapping vinyl records')}<span class="lr-eyebrow">33⅓ RPM</span></div>
-      <div>${lead('Music feels<br><em>like home.</em>','Your favourite songs and the memories that come with them.','The Listening Room')}</div>
+      <div>${lead('Music feels<br><em>like home.</em>','Your favourite songs and the memories that come with them.','MusicTag')}</div>
     </div>`;
   }
   function home() {
@@ -592,7 +592,7 @@
       if (state.sheet === 'copy-link') target?.select();
     }
   }
-  const inviteLink = () => `https://listening-room.example/invite/family?access=${state.inviteRole === 'Can listen' ? 'listen' : 'contribute'}`;
+  const inviteLink = () => `https://musictag.example/invite/family?access=${state.inviteRole === 'Can listen' ? 'listen' : 'contribute'}`;
   async function copyInvite() {
     const url = inviteLink();
     try {
@@ -1091,11 +1091,11 @@
   const savedFields = ['liked','familySongs','sent','inviteRole','size','reduce','language','paired','output','volume'];
   function syncStorage() {
     try {
-      localStorage.setItem('listening-room-v1', JSON.stringify(Object.fromEntries(savedFields.map(key => [key,state[key]]))));
+      localStorage.setItem('musictag-v1', JSON.stringify(Object.fromEntries(savedFields.map(key => [key,state[key]]))));
     } catch { /* The prototype works in memory when web storage is inaccessible. */ }
   }
   try {
-    const saved = JSON.parse(localStorage.getItem('listening-room-v1')) || {};
+    const saved = JSON.parse(localStorage.getItem('musictag-v1')) || {};
     for (const key of savedFields) {
       if (typeof saved[key] === typeof state[key]) state[key] = saved[key];
     }

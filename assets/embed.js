@@ -7,7 +7,7 @@
   style.textContent = `html.embedded{color-scheme:light}html.embedded body{background:transparent;margin:0;padding:0}
     .embedded .site-header,.embedded .page-intro,.embedded .study-section{display:none}
     .embedded main.wrap{max-width:none;padding:0;margin:0}
-    .embedded #listening-room-prototype{padding:16px 12px}
+    .embedded #musictag-prototype{padding:16px 12px}
     .embedded .lr-editorial h2{font-size:48px}
     .embedded .lr-stage{gap:32px}
     .embedded .concept-stage{border-radius:0;background:transparent}

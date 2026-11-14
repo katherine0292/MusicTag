@@ -1,6 +1,6 @@
 # Evaluation and reflection
 
-**Katherine Lin · The Listening Room**
+**Katherine Lin · MusicTag**
 
 ## Formative evidence
 

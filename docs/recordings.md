@@ -8,7 +8,7 @@ A fresh browser session operates the **current high-fidelity prototype** in `pro
 
 Only the phone's **402 × 812** display area is exported. The surrounding webpage, scenario panel, recording chapter labels and browser controls are excluded. The movie is a single continuous recording of actual UI interactions, not a slideshow of exports. A subtle pointer indicator makes taps visible. Captured Web Audio preserves the synthesised playback and changes to volume; a fixed gain adjustment makes the exported audio easier to hear.
 
-- Duration: approximately **1 minute 49 seconds**.
+- Duration: approximately **2 minutes 1 second**.
 - Video: H.264, portrait 402 × 812.
 - Audio: AAC, captured synthesised preview.
 - Poster: `assets/recordings/phone-poster.jpg`.

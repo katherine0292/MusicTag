@@ -237,3 +237,5 @@ for _key in list(C):
 # Keep complete headline phrases together on narrow screens.
 C["hero.title"] = ("<span class='keep-phrase'>让 65 岁以上的听众</span><span class='keep-phrase'>轻松回到熟悉的音乐</span>", "<span class='keep-phrase'>Getting listeners 65+</span> <span class='keep-phrase'>back to familiar music</span>")
 C["hero.sub"] = ("<span class='keep-phrase'>一个 iPhone 应用、一个触感遥控器，</span><span class='keep-phrase'>以及识别失败后仍能恢复的语音搜索。</span>", "An iPhone app, a tactile remote, and a voice search that recovers when it misses.")
+
+C["sp.big"] = ("MusicTag", "MusicTag")
