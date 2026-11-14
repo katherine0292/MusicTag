@@ -1,0 +1,34 @@
+[
+  {
+    "width": 1440,
+    "src": "img/cover-landscape-v3.webp",
+    "natural": [
+      2172,
+      724
+    ],
+    "display": [
+      1412,
+      471
+    ],
+    "bannerWidth": 1412,
+    "sheetWidth": 1412,
+    "fit": "contain",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "src": "img/cover-landscape-v3.webp",
+    "natural": [
+      2172,
+      724
+    ],
+    "display": [
+      390,
+      130
+    ],
+    "bannerWidth": 390,
+    "sheetWidth": 390,
+    "fit": "contain",
+    "overflow": false
+  }
+]

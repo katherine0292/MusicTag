@@ -10,7 +10,7 @@ A simplified iPhone experience and a tactile MusicTag remote, designed to help l
 
 [**Explore the portfolio — live app, sound and hardware interaction included**](https://katherine0292.github.io/MusicTag/)
 
-<img src="img/cover-landscape-v2.webp" alt="The Listening Room: an iPhone player and cream MusicTag remote, on a panoramic ivory and cobalt cover." width="1100">
+<img src="img/cover-landscape-v3.webp" alt="Three text-free music app screens and an older listener pressing MusicTag in a warm home setting." width="1100">
 
 </div>
 
@@ -25,7 +25,7 @@ A simplified iPhone experience and a tactile MusicTag remote, designed to help l
 | **Evidence** | A 13-source literature catalogue, five-service comparison, two traceable firsthand interviews and an early walkthrough. Qualitative direction, not prevalence. |
 | **Status** | Working browser prototypes and 24 iOS design states. New-prototype usability testing, live speech recognition and Bluetooth firmware remain future work. |
 
-The project is named **The Listening Room**; **Spotify Ease** is its simplified phone concept; **MusicTag** is the tactile remote and the repository name. Spotify is the reference interaction context.
+**MusicTag** and **The Listening Room** refer to the same project. The repository was renamed from `the-listening-room` to `MusicTag`; earlier materials retain the original display name. **Spotify Ease** is the simplified phone concept, and the tactile remote is also named MusicTag. Spotify is the reference interaction context.
 
 ## The listening loop
 
