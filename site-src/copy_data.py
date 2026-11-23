@@ -24,7 +24,7 @@ C = {
 "meta.aud.v": ("65 岁以上，数字熟练度、视力、手部灵活度和语言需求各不相同。",
                "Adults 65+ with varied digital confidence, vision, dexterity and language needs."),
 "meta.ctx.k": ("背景", "Context"),
-"meta.ctx.v": ("独立承接的设计委托，以 Spotify 作为交互场景。", "Independent commission, with Spotify as the interaction context."),
+"meta.ctx.v": ("与 Spotify 合作的校企项目。", "University–industry collaboration with Spotify."),
 "meta.out.k": ("交付物", "Deliverables"),
 "meta.out.1": ("高保真浏览器原型", "High-fidelity browser prototype"),
 "meta.out.2": ("24 张 iOS 界面、早期概念与硬件研究", "24 iOS states, early concept and hardware studies"),

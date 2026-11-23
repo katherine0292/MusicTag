@@ -41,6 +41,6 @@ I originally proposed a dedicated Melody Box with presets, on-device information
 
 ## Delivery scope
 
-The commissioned project explores the product and interaction model with a deterministic browser prototype. The demo uses a small fixed catalogue, synthesised audio, local state and record artwork. Implementation of a production catalogue, speech recognition, invitation service and Bluetooth firmware would require separate integration and validation.
+The university–industry project with Spotify explores the product and interaction model with a deterministic browser prototype. The demo uses a small fixed catalogue, synthesised audio, local state and record artwork. Implementation of a production catalogue, speech recognition, invitation service and Bluetooth firmware would require separate integration and validation.
 
 See the [voice interaction specification](voice-product-spec.md) for voice search and the [evaluation plan](evaluation.md) for planned validation.

@@ -2,7 +2,7 @@
 
 **MusicTag · Katherine Lin**
 
-This summary records the scope of an independently commissioned design project. Katherine Lin led the UX and interaction design.
+This summary records the scope of a university–industry design project with Spotify. Katherine Lin led the UX and interaction design.
 
 ## Role
 
@@ -14,7 +14,7 @@ Design a music listening experience that helps older adults find and play person
 
 ## Audience and design context
 
-The design targets listeners aged 65 and over, with particular attention to low digital confidence, changing vision or dexterity, and different language and voice-search needs. Spotify is the reference interaction context. The design pairs a simplified phone experience with a tactile playback remote, MusicTag.
+The design targets listeners aged 65 and over, with particular attention to low digital confidence, changing vision or dexterity, and different language and voice-search needs. The project is a university–industry collaboration with Spotify. The design pairs a simplified phone experience with a tactile playback remote, MusicTag.
 
 ## Design scope
 

@@ -6,7 +6,7 @@
 
 A music experience for listeners aged 65+: choose familiar songs on the phone, control playback with a tactile remote, and recover when search or setup goes wrong.
 
-**Independent UX and interaction design commission · Katherine Lin**
+**University–industry collaboration with Spotify · UX and interaction design · Katherine Lin**
 
 [**Explore the MusicTag portfolio**](https://katherine0292.github.io/MusicTag/)
 
@@ -109,7 +109,7 @@ The next usability round will ask listeners aged 65+ to find a saved song, recov
 
 ## My contribution
 
-I led the independent commission's research, synthesis, interaction design and prototype scope. My work includes the phone–remote split, stable navigation, shared playlists, display preferences, recoverable voice interaction, practical setup guidance and the evaluation plan.
+For this university–industry project with Spotify, I led the research, synthesis, interaction design and prototype scope. My work includes the phone–remote split, stable navigation, shared playlists, display preferences, recoverable voice interaction, practical setup guidance and the evaluation plan.
 
 The deliverables are the bilingual portfolio, browser prototypes, 24 design states, research synthesis, design rationale, voice interaction requirements and evaluation documentation. Production catalogue services, invitation infrastructure and Bluetooth firmware sit outside this delivery.
 
