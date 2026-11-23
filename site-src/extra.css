@@ -329,3 +329,13 @@ html.zh h1,html.zh h2,html.zh h3{word-break:normal;overflow-wrap:normal;letter-s
 /* Native panoramic artwork: full width with every phone and remote edge preserved. */
 .banner{height:auto;aspect-ratio:3/1;min-height:0}
 .banner img{object-fit:contain;object-position:center}
+
+/* Detailed rationale stays available without interrupting the core case study. */
+.evidence-detail{margin-top:22px;border:1px solid var(--line);border-radius:16px;background:var(--paper)}
+.evidence-detail>summary{padding:16px 20px;cursor:pointer;font-size:15px;font-weight:500;line-height:1.5;overflow-wrap:anywhere}
+.evidence-detail[open]>summary{border-bottom:1px solid var(--line)}
+.detail-body{padding:20px;min-width:0}.detail-body>.lbl:first-child{margin-top:0!important}
+.research-evidence{margin-bottom:26px}.research-evidence .bars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}.research-evidence .bar{display:block}.research-evidence .bar .v{display:block;margin-top:8px}.research-evidence .tk{display:none}
+.core-decisions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.core-decisions article{border-top:2px solid var(--acc);padding-top:18px;min-width:0}.core-decisions h3{font-size:21px;line-height:1.3;margin-bottom:12px}.core-decisions p,.evaluation-next{font-size:16px;line-height:1.65}.evaluation-next{margin-top:24px;max-width:70ch}.spec-link{margin-top:22px}.spec-link a{text-underline-offset:4px}
+@media(max-width:760px){.core-decisions{grid-template-columns:1fr;gap:20px}.research-evidence .bars{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-body{padding:16px}}
