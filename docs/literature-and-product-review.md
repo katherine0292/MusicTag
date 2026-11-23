@@ -20,7 +20,7 @@ I searched academic databases using combinations of older adults, technology use
 | [Särkämö et al., *Music, Brain, and Rehabilitation*](https://doi.org/10.3389/fnhum.2016.00103) | Background on music and rehabilitation research. | Use memory and routine as interview topics. |
 | [Mangiacotti et al., *Effects of Music Therapy in Elderly Care*](https://doi.org/10.1016/j.jalz.2019.06.3500) | Exploratory evidence across cognitive, mood and social domains. | Treat emotional or social benefits as questions for future study. |
 | [Melhuish, Beuzeboc and Guzmán, *Developing Relationships Between Care Staff and People With Dementia Through Music Therapy and Dance Movement Therapy*](https://doi.org/10.1177/1471301215588030) | Relationship building through shared activity. | Support shared playlists with a familiar, low-effort path. |
-| [Powell, *The Voice of Experience*](https://doi.org/10.1177/13594575060200020) | Music therapy across community settings. | Consider listening context when interpreting participant reports. |
+| [Powell, *The Voice of Experience*](https://doi.org/10.1177/135945750602000205) | Music therapy across community settings. | Consider listening context when interpreting participant reports. |
 
 ## Product review
 
