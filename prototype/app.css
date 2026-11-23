@@ -30,9 +30,9 @@
   background: radial-gradient(circle,currentColor 0 2px,transparent 3px 5px,currentColor 5.5px 6.5px,transparent 7px 10px,currentColor 10.5px 11.5px,transparent 12px 14px,currentColor 14.5px 15px,transparent 15.5px);
 }
 #musictag-prototype .lr-editorial { margin: 26px 0 32px; }
-#musictag-prototype .lr-editorial h2 { font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 780; font-size: clamp(48px,7.1vw,86px); letter-spacing: -.077em; word-spacing: .04em; line-height: .94; }
+#musictag-prototype .lr-editorial h2 { font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 780; font-size: 38px; letter-spacing: -.077em; word-spacing: .04em; line-height: 1.1; }
 #musictag-prototype .lr-editorial em { color: var(--outside-accent); font-style: normal; }
-#musictag-prototype .lr-editorial p { color: var(--outside-muted); font-size: 14px; line-height: 1.7; max-width: 27ch; margin-top: 20px; }
+#musictag-prototype .lr-editorial p { color: var(--outside-muted); font-size: 14px; line-height: 1.7; margin-top: 20px; }
 #musictag-prototype .lr-scenarios h3 { font-size: 13px; font-weight: 730; margin-bottom: 8px; }
 #musictag-prototype .lr-scenario {
   display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%;
@@ -268,8 +268,6 @@
   #musictag-prototype .lr-panel { padding: 0 7px; }
   #musictag-prototype .lr-editorial { margin: 13px 0 19px; }
   #musictag-prototype .lr-editorial h2 { font-size: 38px; letter-spacing: -.075em; }
-  #musictag-prototype .lr-editorial br { display: none; }
-  #musictag-prototype .lr-editorial br::after { content: " "; }
   #musictag-prototype .lr-editorial p { max-width: none; margin-top: 12px; }
 }
 @media (max-width: 365px) {
@@ -291,7 +289,7 @@
 
 #musictag-prototype { padding: 30px 12px 48px; }
 #musictag-prototype .lr-reset { min-height: 44px; padding: 6px 1px; background: transparent; border: 0; color: var(--outside-accent); font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }
-#musictag-prototype .lr-footnote { margin-top: 8px; max-width: 32ch; }
+#musictag-prototype .lr-footnote { margin-top: 8px; }
 @media (max-width: 650px) {
   #musictag-prototype .lr-stage { grid-template-columns: minmax(0,402px); }
   #musictag-prototype .lr-phone { grid-row: 1; }
