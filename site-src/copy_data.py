@@ -239,3 +239,28 @@ C["hero.title"] = ("<span class='keep-phrase'>让 65 岁以上的听众</span><s
 C["hero.sub"] = ("<span class='keep-phrase'>一个 iPhone 应用、一个触感遥控器，</span><span class='keep-phrase'>以及识别失败后仍能恢复的语音搜索。</span>", "An iPhone app, a tactile remote, and a voice search that recovers when it misses.")
 
 C["sp.big"] = ("MusicTag", "MusicTag")
+
+# Case-study reading layer.
+C.update({'edit.rs.more': ('设计人物与补充观察', 'Design personas and supporting observations'),
+ 'edit.dc.k': ('三个核心决策', 'Three core decisions'),
+ 'edit.dc1.t': ('稳定地回到熟悉歌曲', 'A stable route back to familiar songs'),
+ 'edit.dc1.d': ('Home 和 Library 保留最近播放、喜欢与置顶歌曲。持续显示的迷你播放器让浏览和音乐控制保持连接。',
+                'Home and Library keep last played, liked and pinned music easy to return to. A '
+                'persistent mini-player keeps browsing connected to playback.'),
+ 'edit.dc2.t': ('手机选内容，遥控器管播放', 'Choose on the phone; control with MusicTag'),
+ 'edit.dc2.d': ('已有手机负责歌单和音箱选择。五键遥控器只处理播放、切歌和音量，配合可练习的按键引导，减少新设备的学习范围。',
+                'The existing phone handles playlists and speaker choice. Five remote controls '
+                'cover playback and volume, with guided button practice to bound what the new '
+                'device asks people to learn.'),
+ 'edit.dc3.t': ('失败之后仍有下一步', 'Keep a way forward after failure'),
+ 'edit.dc3.d': ('语音结果先核对再播放；失败时可重试或直接键入。离线时仍能回到 Library，配对错误也给出恢复操作。',
+                'Review voice matches before playback. After a miss, retry or type. Library stays '
+                'available offline, and pairing errors offer a recovery action.'),
+ 'edit.dc.more': ('查看完整设计决策与原则', 'View the full design rationale and principles'),
+ 'edit.vo.more': ('查看语音流程、八状态与产品要求', 'Voice pipeline, eight states and product requirements'),
+ 'edit.vo.link': ('完整语音交互规格', 'Full voice interaction specification'),
+ 'edit.ev.next': ('下一轮将请 65 岁以上的听众完成找歌、语音失败恢复和遥控器任务，记录独立完成、用时、错误与所需帮助。当前设计的可用性效果尚待验证。',
+                  'The next round asks listeners aged 65+ to find music, recover from a voice miss '
+                  'and use the remote. It will record independent completion, time, errors and '
+                  'help needed. Current-design usability outcomes remain to be established.'),
+ 'edit.ev.more': ('查看拟定测试任务与语音诊断指标', 'Proposed usability tasks and voice diagnostics')})
